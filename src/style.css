@@ -19,7 +19,14 @@ body{
 }
 
 .page-view {
-    max-width: 420px;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .page-view {
+        max-width: 420px;
+        overflow: hidden;
+    }
 }
 
 .text-product{
