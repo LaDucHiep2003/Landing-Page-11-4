@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Judson&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    color: #000;
+}
+
+.container {
+    /* < 1280 => mobile view */
+    /*@apply max-w-none px-4;*/
+    /* >= 1280 => desktop view */
+    /*@apply xl:max-w-[1170px] xl:px-0;*/
+    /*@apply transition-all ease-in-out;*/
+    display: flex;
+    justify-content: center;
+}
+
+.page-view {
+    max-width: 420px;
+}
+
+.text-product{
+    font-family: 'Judson', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    75% { transform: translateX(3px); }
+}
+
+.animate-shake {
+    animation: shake 0.4s ease-in-out infinite;
+}
+@keyframes push-forward {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.animate-push-forward {
+    animation: push-forward 1s ease-in-out infinite;
+}
+
