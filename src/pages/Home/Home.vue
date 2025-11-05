@@ -95,14 +95,95 @@
       </div>
     </div>
 
-    <div class="text-3xl font-bold text-center uppercase mt-5 animate-push-forward">Chanel</div>
+    <div class="text-3xl font-bold text-center uppercase my-6 animate-push-forward">Chanel</div>
 
-    <div>
-        <div>
-          <div>
-            <img src="" alt="">
+    <div class="flex flex-col gap-6">
+      <div class="flex gap-2 items-center">
+          <div class="w-[158px] h-[158px] relative">
+            <div class="w-[146px] h-[148px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
+              bg-origin-content bg-clip-border" style="background-image: url('https://content.pancake.vn/1/s546x728/fwebp/08/a0/97/b4/c79418f791aa99ec0e93f202bae35b7c8135595fbe408d430005e99a-w:564-h:752-l:24586-t:image/jpeg.jpg');"></div>
+            <div class="w-[158px] h-[158px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
+              bg-origin-content bg-clip-border" style="background-image: url('https://content.pancake.vn/1/fwebp/fa/66/d5/cd/9186e990dc5541004f05499396c3179cb9cfec72a45d5ae2463b058f-w:150-h:150-l:4225-t:image/svg+xml.svg');"></div>
+            <div class="absolute top-2 left-[133px] text-[8px] font-bold text-white">
+              Sale
+              <br>
+              71%
+            </div>
+          </div>
+          <div class="pl-12 flex flex-col gap-[2px]">
+            <div class="text-base text-center font-bold"> Mã 83 -
+              <span class="font-normal">Chanel Allure Homme EDT - 100ml</span> </div>
+            <div class="flex justify-between">
+              <div class="text-base line-through">3.500.000đ</div>
+              <div  class="text-base text-[#ef1000] font-bold">990.000đ</div>
+            </div>
+            <div class="text-base font-bold">Xuất sứ: <span class="font-normal">Pháp</span></div>
+            <div class="text-base font-bold">Số lượng: <span class="font-normal">Còn lại 8 sản phẩm</span></div>
+            <div class="w-4/6 mx-auto">
+              <div class="px-3 py-1 bg-[#ae0c00]">
+                <div class="uppercase text-base font-bold text-white text-center">Đặt hàng</div>
+              </div>
+            </div>
           </div>
         </div>
+
+      <div class="flex gap-2 items-center">
+        <div class="w-[158px] h-[158px] relative">
+          <div class="w-[146px] h-[148px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
+              bg-origin-content bg-clip-border" style="background-image: url('https://content.pancake.vn/1/s546x728/fwebp/08/a0/97/b4/c79418f791aa99ec0e93f202bae35b7c8135595fbe408d430005e99a-w:564-h:752-l:24586-t:image/jpeg.jpg');"></div>
+          <div class="w-[158px] h-[158px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
+              bg-origin-content bg-clip-border" style="background-image: url('https://content.pancake.vn/1/fwebp/fa/66/d5/cd/9186e990dc5541004f05499396c3179cb9cfec72a45d5ae2463b058f-w:150-h:150-l:4225-t:image/svg+xml.svg');"></div>
+          <div class="absolute top-2 left-[133px] text-[8px] font-bold text-white">
+            Sale
+            <br>
+            71%
+          </div>
+        </div>
+        <div class="pl-12 flex flex-col gap-[2px]">
+          <div class="text-base text-center font-bold"> Mã 83 -
+            <span class="font-normal">Chanel Allure Homme EDT - 100ml</span> </div>
+          <div class="flex justify-between">
+            <div class="text-base line-through">3.500.000đ</div>
+            <div  class="text-base text-[#ef1000] font-bold">990.000đ</div>
+          </div>
+          <div class="text-base font-bold">Xuất sứ: <span class="font-normal">Pháp</span></div>
+          <div class="text-base font-bold">Số lượng: <span class="font-normal">Còn lại 8 sản phẩm</span></div>
+          <div class="w-4/6 mx-auto">
+            <div class="px-3 py-1 bg-[#ae0c00]">
+              <div class="uppercase text-base font-bold text-white text-center">Đặt hàng</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-2 items-center">
+        <div class="w-[158px] h-[158px] relative">
+          <div class="w-[146px] h-[148px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
+              bg-origin-content bg-clip-border" style="background-image: url('https://content.pancake.vn/1/s546x728/fwebp/08/a0/97/b4/c79418f791aa99ec0e93f202bae35b7c8135595fbe408d430005e99a-w:564-h:752-l:24586-t:image/jpeg.jpg');"></div>
+          <div class="w-[158px] h-[158px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
+              bg-origin-content bg-clip-border" style="background-image: url('https://content.pancake.vn/1/fwebp/fa/66/d5/cd/9186e990dc5541004f05499396c3179cb9cfec72a45d5ae2463b058f-w:150-h:150-l:4225-t:image/svg+xml.svg');"></div>
+          <div class="absolute top-2 left-[133px] text-[8px] font-bold text-white">
+            Sale
+            <br>
+            71%
+          </div>
+        </div>
+        <div class="pl-12 flex flex-col gap-[2px]">
+          <div class="text-base text-center font-bold"> Mã 83 -
+            <span class="font-normal">Chanel Allure Homme EDT - 100ml</span> </div>
+          <div class="flex justify-between">
+            <div class="text-base line-through">3.500.000đ</div>
+            <div  class="text-base text-[#ef1000] font-bold">990.000đ</div>
+          </div>
+          <div class="text-base font-bold">Xuất sứ: <span class="font-normal">Pháp</span></div>
+          <div class="text-base font-bold">Số lượng: <span class="font-normal">Còn lại 8 sản phẩm</span></div>
+          <div class="w-4/6 mx-auto">
+            <div class="px-3 py-1 bg-[#ae0c00]">
+              <div class="uppercase text-base font-bold text-white text-center">Đặt hàng</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
