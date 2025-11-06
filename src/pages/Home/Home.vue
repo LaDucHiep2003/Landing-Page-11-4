@@ -17,6 +17,10 @@
 
     <Chanel />
 
+    <Gucci />
+
+    <NarcisoRobriguez />
+
     <div class="w-14 h-9 mx-auto pt-16 pb-10">
       <div class="bg-center bg-cover bg-no-repeat bg-scroll
               bg-origin-content bg-clip-border w-14 h-9" style="background-image: url('https://content.pancake.vn/1/dlc/47/b9/bc/a2/5d55a0ce325e62b6b73cf97a9d723a4caeebd03ea06692cecae50708-w:256-h:164-l:97037-t:image/gif.gif')"></div>
@@ -318,6 +322,8 @@ import Information from "@/pages/Home/Information.vue";
 import Brands from "@/pages/Home/Brands.vue";
 import Chanel from "@/pages/Home/Chanel.vue";
 import Order from "@/pages/Home/Order.vue";
+import Gucci from "@/pages/Home/Gucci.vue";
+import NarcisoRobriguez from "@/pages/Home/NarcisoRobriguez.vue";
 
 export default {
   components:{
@@ -326,7 +332,9 @@ export default {
     Information,
     Brands,
     Chanel,
-    Order
+    Order,
+    Gucci,
+    NarcisoRobriguez
   },
   data() {
     return {
