@@ -4,9 +4,9 @@
     <div class="bg-[#FF0000] px-1 py-1">
       <div class="text-[17px] text-white font-bold text-center">NƯỚC HOA LAVERA - SHOP NƯỚC HOA XÁCH TAY UY TÍN HÀNG ĐẦU VIỆT NAM</div>
     </div>
-    <div class="mt-3">
-      <img src="https://content.pancake.vn/1/s1377x568/fwebp/87/55/79/ce/0f355da5c633038d1292de2fa978a212f627381a538d9a59594eafdc.jpg" alt="">
-    </div>
+
+    <Slider />
+
     <div class="text-product mt-5">Các Dòng Sản Phẩm Phân Phối</div>
     <div class="grid grid-cols-3 gap-3 mt-5 px-3">
       <div class="flex flex-col gap-2 justify-center items-center">
@@ -296,7 +296,7 @@
           <!-- 1 star -->
           <div class="flex items-center gap-2">
             <span class="text-gray-600 font-bold">1</span>
-            <img class="w-4 h-4 " src="data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSdub25lJyAgd2lkdGg9JzYzJyBoZWlnaHQ9JzYwJyB2aWV3Qm94PScwIDAgNjMgNjAnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTYwLjUxMTEgMjAuODYxOEw0MS45MTQ5IDE4LjE1OTJMMzMuNjAxOSAxLjMwNjE1QzMzLjM3NDkgMC44NDQ3MjMgMzMuMDAxNCAwLjQ3MTE4OCAzMi41Mzk5IDAuMjQ0MTM3QzMxLjM4MjcgLTAuMzI3MTUyIDI5Ljk3NjQgMC4xNDg5MjIgMjkuMzk3OCAxLjMwNjE1TDIxLjA4NDggMTguMTU5MkwyLjQ4ODY2IDIwLjg2MThDMS45NzU5NiAyMC45MzUxIDEuNTA3MjEgMjEuMTc2OCAxLjE0ODMyIDIxLjU0M0MwLjcxNDQ0OSAyMS45ODg5IDAuNDc1MzY0IDIyLjU4ODkgMC40ODM2MDUgMjMuMjExQzAuNDkxODQ1IDIzLjgzMzEgMC43NDY3MzUgMjQuNDI2NSAxLjE5MjI3IDI0Ljg2MDhMMTQuNjQ2OSAzNy45Nzg1TDExLjQ2ODEgNTYuNTAxNUMxMS4zOTM2IDU2LjkzMjMgMTEuNDQxMyA1Ny4zNzU1IDExLjYwNTggNTcuNzgwN0MxMS43NzAzIDU4LjE4NTggMTIuMDQ1IDU4LjUzNjggMTIuMzk4OCA1OC43OTM4QzEyLjc1MjYgNTkuMDUwNyAxMy4xNzE0IDU5LjIwMzQgMTMuNjA3NSA1OS4yMzQ1QzE0LjA0MzcgNTkuMjY1NiAxNC40Nzk5IDU5LjE3MzkgMTQuODY2NiA1OC45Njk3TDMxLjQ5OTkgNTAuMjI0Nkw0OC4xMzMyIDU4Ljk2OTdDNDguNTg3MyA1OS4yMTE0IDQ5LjExNDYgNTkuMjkyIDQ5LjYyIDU5LjIwNDFDNTAuODk0NCA1OC45ODQ0IDUxLjc1MTQgNTcuNzc1OSA1MS41MzE2IDU2LjUwMTVMNDguMzUyOSAzNy45Nzg1TDYxLjgwNzUgMjQuODYwOEM2Mi4xNzM3IDI0LjUwMiA2Mi40MTU0IDI0LjAzMzIgNjIuNDg4NyAyMy41MjA1QzYyLjY4NjQgMjIuMjM4OCA2MS43OTI5IDIxLjA1MjIgNjAuNTExMSAyMC44NjE4WicgZmlsbD0nIzkxOTE5MScvPjwvc3ZnPg==" alt="star" />
+            <div class="icon-star h-4 w-4"></div>
             <div class="flex-1 bg-gray-300 rounded-full h-3 overflow-hidden">
               <div class="bg-[#ef1000] h-full rounded-full" style="width: 5%"></div>
             </div>
@@ -304,7 +304,7 @@
 
           <div class="flex items-center gap-2">
             <span class="text-gray-600 font-bold">2</span>
-            <img class="w-4 h-4 " src="data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSdub25lJyAgd2lkdGg9JzYzJyBoZWlnaHQ9JzYwJyB2aWV3Qm94PScwIDAgNjMgNjAnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTYwLjUxMTEgMjAuODYxOEw0MS45MTQ5IDE4LjE1OTJMMzMuNjAxOSAxLjMwNjE1QzMzLjM3NDkgMC44NDQ3MjMgMzMuMDAxNCAwLjQ3MTE4OCAzMi41Mzk5IDAuMjQ0MTM3QzMxLjM4MjcgLTAuMzI3MTUyIDI5Ljk3NjQgMC4xNDg5MjIgMjkuMzk3OCAxLjMwNjE1TDIxLjA4NDggMTguMTU5MkwyLjQ4ODY2IDIwLjg2MThDMS45NzU5NiAyMC45MzUxIDEuNTA3MjEgMjEuMTc2OCAxLjE0ODMyIDIxLjU0M0MwLjcxNDQ0OSAyMS45ODg5IDAuNDc1MzY0IDIyLjU4ODkgMC40ODM2MDUgMjMuMjExQzAuNDkxODQ1IDIzLjgzMzEgMC43NDY3MzUgMjQuNDI2NSAxLjE5MjI3IDI0Ljg2MDhMMTQuNjQ2OSAzNy45Nzg1TDExLjQ2ODEgNTYuNTAxNUMxMS4zOTM2IDU2LjkzMjMgMTEuNDQxMyA1Ny4zNzU1IDExLjYwNTggNTcuNzgwN0MxMS43NzAzIDU4LjE4NTggMTIuMDQ1IDU4LjUzNjggMTIuMzk4OCA1OC43OTM4QzEyLjc1MjYgNTkuMDUwNyAxMy4xNzE0IDU5LjIwMzQgMTMuNjA3NSA1OS4yMzQ1QzE0LjA0MzcgNTkuMjY1NiAxNC40Nzk5IDU5LjE3MzkgMTQuODY2NiA1OC45Njk3TDMxLjQ5OTkgNTAuMjI0Nkw0OC4xMzMyIDU4Ljk2OTdDNDguNTg3MyA1OS4yMTE0IDQ5LjExNDYgNTkuMjkyIDQ5LjYyIDU5LjIwNDFDNTAuODk0NCA1OC45ODQ0IDUxLjc1MTQgNTcuNzc1OSA1MS41MzE2IDU2LjUwMTVMNDguMzUyOSAzNy45Nzg1TDYxLjgwNzUgMjQuODYwOEM2Mi4xNzM3IDI0LjUwMiA2Mi40MTU0IDI0LjAzMzIgNjIuNDg4NyAyMy41MjA1QzYyLjY4NjQgMjIuMjM4OCA2MS43OTI5IDIxLjA1MjIgNjAuNTExMSAyMC44NjE4WicgZmlsbD0nIzkxOTE5MScvPjwvc3ZnPg==" alt="star" />
+            <div class="icon-star h-4 w-4"></div>
             <div class="flex-1 bg-gray-300 rounded-full h-3 overflow-hidden">
               <div class="bg-[#ef1000] h-full rounded-full" style="width: 15%"></div>
             </div>
@@ -312,7 +312,7 @@
 
           <div class="flex items-center gap-2">
             <span class="text-gray-600 font-bold">3</span>
-            <img class="w-4 h-4 " src="data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSdub25lJyAgd2lkdGg9JzYzJyBoZWlnaHQ9JzYwJyB2aWV3Qm94PScwIDAgNjMgNjAnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTYwLjUxMTEgMjAuODYxOEw0MS45MTQ5IDE4LjE1OTJMMzMuNjAxOSAxLjMwNjE1QzMzLjM3NDkgMC44NDQ3MjMgMzMuMDAxNCAwLjQ3MTE4OCAzMi41Mzk5IDAuMjQ0MTM3QzMxLjM4MjcgLTAuMzI3MTUyIDI5Ljk3NjQgMC4xNDg5MjIgMjkuMzk3OCAxLjMwNjE1TDIxLjA4NDggMTguMTU5MkwyLjQ4ODY2IDIwLjg2MThDMS45NzU5NiAyMC45MzUxIDEuNTA3MjEgMjEuMTc2OCAxLjE0ODMyIDIxLjU0M0MwLjcxNDQ0OSAyMS45ODg5IDAuNDc1MzY0IDIyLjU4ODkgMC40ODM2MDUgMjMuMjExQzAuNDkxODQ1IDIzLjgzMzEgMC43NDY3MzUgMjQuNDI2NSAxLjE5MjI3IDI0Ljg2MDhMMTQuNjQ2OSAzNy45Nzg1TDExLjQ2ODEgNTYuNTAxNUMxMS4zOTM2IDU2LjkzMjMgMTEuNDQxMyA1Ny4zNzU1IDExLjYwNTggNTcuNzgwN0MxMS43NzAzIDU4LjE4NTggMTIuMDQ1IDU4LjUzNjggMTIuMzk4OCA1OC43OTM4QzEyLjc1MjYgNTkuMDUwNyAxMy4xNzE0IDU5LjIwMzQgMTMuNjA3NSA1OS4yMzQ1QzE0LjA0MzcgNTkuMjY1NiAxNC40Nzk5IDU5LjE3MzkgMTQuODY2NiA1OC45Njk3TDMxLjQ5OTkgNTAuMjI0Nkw0OC4xMzMyIDU4Ljk2OTdDNDguNTg3MyA1OS4yMTE0IDQ5LjExNDYgNTkuMjkyIDQ5LjYyIDU5LjIwNDFDNTAuODk0NCA1OC45ODQ0IDUxLjc1MTQgNTcuNzc1OSA1MS41MzE2IDU2LjUwMTVMNDguMzUyOSAzNy45Nzg1TDYxLjgwNzUgMjQuODYwOEM2Mi4xNzM3IDI0LjUwMiA2Mi40MTU0IDI0LjAzMzIgNjIuNDg4NyAyMy41MjA1QzYyLjY4NjQgMjIuMjM4OCA2MS43OTI5IDIxLjA1MjIgNjAuNTExMSAyMC44NjE4WicgZmlsbD0nIzkxOTE5MScvPjwvc3ZnPg==" alt="star" />
+            <div class="icon-star h-4 w-4"></div>
             <div class="flex-1 bg-gray-300 rounded-full h-3 overflow-hidden">
               <div class="bg-[#ef1000] h-full rounded-full" style="width: 25%"></div>
             </div>
@@ -320,7 +320,7 @@
 
           <div class="flex items-center gap-2">
             <span class="text-gray-600 font-bold">4</span>
-            <img class="w-4 h-4 " src="data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSdub25lJyAgd2lkdGg9JzYzJyBoZWlnaHQ9JzYwJyB2aWV3Qm94PScwIDAgNjMgNjAnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTYwLjUxMTEgMjAuODYxOEw0MS45MTQ5IDE4LjE1OTJMMzMuNjAxOSAxLjMwNjE1QzMzLjM3NDkgMC44NDQ3MjMgMzMuMDAxNCAwLjQ3MTE4OCAzMi41Mzk5IDAuMjQ0MTM3QzMxLjM4MjcgLTAuMzI3MTUyIDI5Ljk3NjQgMC4xNDg5MjIgMjkuMzk3OCAxLjMwNjE1TDIxLjA4NDggMTguMTU5MkwyLjQ4ODY2IDIwLjg2MThDMS45NzU5NiAyMC45MzUxIDEuNTA3MjEgMjEuMTc2OCAxLjE0ODMyIDIxLjU0M0MwLjcxNDQ0OSAyMS45ODg5IDAuNDc1MzY0IDIyLjU4ODkgMC40ODM2MDUgMjMuMjExQzAuNDkxODQ1IDIzLjgzMzEgMC43NDY3MzUgMjQuNDI2NSAxLjE5MjI3IDI0Ljg2MDhMMTQuNjQ2OSAzNy45Nzg1TDExLjQ2ODEgNTYuNTAxNUMxMS4zOTM2IDU2LjkzMjMgMTEuNDQxMyA1Ny4zNzU1IDExLjYwNTggNTcuNzgwN0MxMS43NzAzIDU4LjE4NTggMTIuMDQ1IDU4LjUzNjggMTIuMzk4OCA1OC43OTM4QzEyLjc1MjYgNTkuMDUwNyAxMy4xNzE0IDU5LjIwMzQgMTMuNjA3NSA1OS4yMzQ1QzE0LjA0MzcgNTkuMjY1NiAxNC40Nzk5IDU5LjE3MzkgMTQuODY2NiA1OC45Njk3TDMxLjQ5OTkgNTAuMjI0Nkw0OC4xMzMyIDU4Ljk2OTdDNDguNTg3MyA1OS4yMTE0IDQ5LjExNDYgNTkuMjkyIDQ5LjYyIDU5LjIwNDFDNTAuODk0NCA1OC45ODQ0IDUxLjc1MTQgNTcuNzc1OSA1MS41MzE2IDU2LjUwMTVMNDguMzUyOSAzNy45Nzg1TDYxLjgwNzUgMjQuODYwOEM2Mi4xNzM3IDI0LjUwMiA2Mi40MTU0IDI0LjAzMzIgNjIuNDg4NyAyMy41MjA1QzYyLjY4NjQgMjIuMjM4OCA2MS43OTI5IDIxLjA1MjIgNjAuNTExMSAyMC44NjE4WicgZmlsbD0nIzkxOTE5MScvPjwvc3ZnPg==" alt="star" />
+            <div class="icon-star h-4 w-4"></div>
             <div class="flex-1 bg-gray-300 rounded-full h-3 overflow-hidden">
               <div class="bg-[#ef1000] h-full rounded-full" style="width: 70%"></div>
             </div>
@@ -329,7 +329,7 @@
           <!-- 5 stars -->
           <div class="flex items-center gap-2">
             <span class="text-gray-600 font-bold">5</span>
-            <img class="w-4 h-4 " src="data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSdub25lJyAgd2lkdGg9JzYzJyBoZWlnaHQ9JzYwJyB2aWV3Qm94PScwIDAgNjMgNjAnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTYwLjUxMTEgMjAuODYxOEw0MS45MTQ5IDE4LjE1OTJMMzMuNjAxOSAxLjMwNjE1QzMzLjM3NDkgMC44NDQ3MjMgMzMuMDAxNCAwLjQ3MTE4OCAzMi41Mzk5IDAuMjQ0MTM3QzMxLjM4MjcgLTAuMzI3MTUyIDI5Ljk3NjQgMC4xNDg5MjIgMjkuMzk3OCAxLjMwNjE1TDIxLjA4NDggMTguMTU5MkwyLjQ4ODY2IDIwLjg2MThDMS45NzU5NiAyMC45MzUxIDEuNTA3MjEgMjEuMTc2OCAxLjE0ODMyIDIxLjU0M0MwLjcxNDQ0OSAyMS45ODg5IDAuNDc1MzY0IDIyLjU4ODkgMC40ODM2MDUgMjMuMjExQzAuNDkxODQ1IDIzLjgzMzEgMC43NDY3MzUgMjQuNDI2NSAxLjE5MjI3IDI0Ljg2MDhMMTQuNjQ2OSAzNy45Nzg1TDExLjQ2ODEgNTYuNTAxNUMxMS4zOTM2IDU2LjkzMjMgMTEuNDQxMyA1Ny4zNzU1IDExLjYwNTggNTcuNzgwN0MxMS43NzAzIDU4LjE4NTggMTIuMDQ1IDU4LjUzNjggMTIuMzk4OCA1OC43OTM4QzEyLjc1MjYgNTkuMDUwNyAxMy4xNzE0IDU5LjIwMzQgMTMuNjA3NSA1OS4yMzQ1QzE0LjA0MzcgNTkuMjY1NiAxNC40Nzk5IDU5LjE3MzkgMTQuODY2NiA1OC45Njk3TDMxLjQ5OTkgNTAuMjI0Nkw0OC4xMzMyIDU4Ljk2OTdDNDguNTg3MyA1OS4yMTE0IDQ5LjExNDYgNTkuMjkyIDQ5LjYyIDU5LjIwNDFDNTAuODk0NCA1OC45ODQ0IDUxLjc1MTQgNTcuNzc1OSA1MS41MzE2IDU2LjUwMTVMNDguMzUyOSAzNy45Nzg1TDYxLjgwNzUgMjQuODYwOEM2Mi4xNzM3IDI0LjUwMiA2Mi40MTU0IDI0LjAzMzIgNjIuNDg4NyAyMy41MjA1QzYyLjY4NjQgMjIuMjM4OCA2MS43OTI5IDIxLjA1MjIgNjAuNTExMSAyMC44NjE4WicgZmlsbD0nIzkxOTE5MScvPjwvc3ZnPg==" alt="star" />
+            <div class="icon-star h-4 w-4"></div>
             <div class="flex-1 bg-gray-300 rounded-full h-3 overflow-hidden">
               <div class="bg-[#ef1000] h-full rounded-full" style="width: 95%"></div>
             </div>
@@ -347,29 +347,151 @@
       </div>
     </div>
 
-    <div>
-      <div class="flex justify-start items-center gap-5 flex-wrap">
+    <div class="pb-5 border-b border-black pt-2">
+      <div class="flex justify-start items-center gap-5 flex-wrap relative">
         <div class="w-[71px] h-[72px]">
           <img class="w-full h-full rounded-full" src="https://content.pancake.vn/1/s471x628/fwebp/34/26/33/fa/440efea9864a4307409f12b7bde33441e034bdf263e61b1299a0ec8c-w:1536-h:2048-l:299940-t:image/jpeg.jpg" alt="Avatar">
         </div>
         <div class="flex gap-1">
-          <img class="w-3 h-3 bg-[rgba(153, 23, 13, 1)]" src="data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSdub25lJyAgd2lkdGg9JzYzJyBoZWlnaHQ9JzYwJyB2aWV3Qm94PScwIDAgNjMgNjAnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTYwLjUxMTEgMjAuODYxOEw0MS45MTQ5IDE4LjE1OTJMMzMuNjAxOSAxLjMwNjE1QzMzLjM3NDkgMC44NDQ3MjMgMzMuMDAxNCAwLjQ3MTE4OCAzMi41Mzk5IDAuMjQ0MTM3QzMxLjM4MjcgLTAuMzI3MTUyIDI5Ljk3NjQgMC4xNDg5MjIgMjkuMzk3OCAxLjMwNjE1TDIxLjA4NDggMTguMTU5MkwyLjQ4ODY2IDIwLjg2MThDMS45NzU5NiAyMC45MzUxIDEuNTA3MjEgMjEuMTc2OCAxLjE0ODMyIDIxLjU0M0MwLjcxNDQ0OSAyMS45ODg5IDAuNDc1MzY0IDIyLjU4ODkgMC40ODM2MDUgMjMuMjExQzAuNDkxODQ1IDIzLjgzMzEgMC43NDY3MzUgMjQuNDI2NSAxLjE5MjI3IDI0Ljg2MDhMMTQuNjQ2OSAzNy45Nzg1TDExLjQ2ODEgNTYuNTAxNUMxMS4zOTM2IDU2LjkzMjMgMTEuNDQxMyA1Ny4zNzU1IDExLjYwNTggNTcuNzgwN0MxMS43NzAzIDU4LjE4NTggMTIuMDQ1IDU4LjUzNjggMTIuMzk4OCA1OC43OTM4QzEyLjc1MjYgNTkuMDUwNyAxMy4xNzE0IDU5LjIwMzQgMTMuNjA3NSA1OS4yMzQ1QzE0LjA0MzcgNTkuMjY1NiAxNC40Nzk5IDU5LjE3MzkgMTQuODY2NiA1OC45Njk3TDMxLjQ5OTkgNTAuMjI0Nkw0OC4xMzMyIDU4Ljk2OTdDNDguNTg3MyA1OS4yMTE0IDQ5LjExNDYgNTkuMjkyIDQ5LjYyIDU5LjIwNDFDNTAuODk0NCA1OC45ODQ0IDUxLjc1MTQgNTcuNzc1OSA1MS41MzE2IDU2LjUwMTVMNDguMzUyOSAzNy45Nzg1TDYxLjgwNzUgMjQuODYwOEM2Mi4xNzM3IDI0LjUwMiA2Mi40MTU0IDI0LjAzMzIgNjIuNDg4NyAyMy41MjA1QzYyLjY4NjQgMjIuMjM4OCA2MS43OTI5IDIxLjA1MjIgNjAuNTExMSAyMC44NjE4WicgZmlsbD0nIzkxOTE5MScvPjwvc3ZnPg==" alt="star" />
-          <img class="w-3 h-3 bg-[rgba(153, 23, 13, 1)]" src="data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSdub25lJyAgd2lkdGg9JzYzJyBoZWlnaHQ9JzYwJyB2aWV3Qm94PScwIDAgNjMgNjAnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTYwLjUxMTEgMjAuODYxOEw0MS45MTQ5IDE4LjE1OTJMMzMuNjAxOSAxLjMwNjE1QzMzLjM3NDkgMC44NDQ3MjMgMzMuMDAxNCAwLjQ3MTE4OCAzMi41Mzk5IDAuMjQ0MTM3QzMxLjM4MjcgLTAuMzI3MTUyIDI5Ljk3NjQgMC4xNDg5MjIgMjkuMzk3OCAxLjMwNjE1TDIxLjA4NDggMTguMTU5MkwyLjQ4ODY2IDIwLjg2MThDMS45NzU5NiAyMC45MzUxIDEuNTA3MjEgMjEuMTc2OCAxLjE0ODMyIDIxLjU0M0MwLjcxNDQ0OSAyMS45ODg5IDAuNDc1MzY0IDIyLjU4ODkgMC40ODM2MDUgMjMuMjExQzAuNDkxODQ1IDIzLjgzMzEgMC43NDY3MzUgMjQuNDI2NSAxLjE5MjI3IDI0Ljg2MDhMMTQuNjQ2OSAzNy45Nzg1TDExLjQ2ODEgNTYuNTAxNUMxMS4zOTM2IDU2LjkzMjMgMTEuNDQxMyA1Ny4zNzU1IDExLjYwNTggNTcuNzgwN0MxMS43NzAzIDU4LjE4NTggMTIuMDQ1IDU4LjUzNjggMTIuMzk4OCA1OC43OTM4QzEyLjc1MjYgNTkuMDUwNyAxMy4xNzE0IDU5LjIwMzQgMTMuNjA3NSA1OS4yMzQ1QzE0LjA0MzcgNTkuMjY1NiAxNC40Nzk5IDU5LjE3MzkgMTQuODY2NiA1OC45Njk3TDMxLjQ5OTkgNTAuMjI0Nkw0OC4xMzMyIDU4Ljk2OTdDNDguNTg3MyA1OS4yMTE0IDQ5LjExNDYgNTkuMjkyIDQ5LjYyIDU5LjIwNDFDNTAuODk0NCA1OC45ODQ0IDUxLjc1MTQgNTcuNzc1OSA1MS41MzE2IDU2LjUwMTVMNDguMzUyOSAzNy45Nzg1TDYxLjgwNzUgMjQuODYwOEM2Mi4xNzM3IDI0LjUwMiA2Mi40MTU0IDI0LjAzMzIgNjIuNDg4NyAyMy41MjA1QzYyLjY4NjQgMjIuMjM4OCA2MS43OTI5IDIxLjA1MjIgNjAuNTExMSAyMC44NjE4WicgZmlsbD0nIzkxOTE5MScvPjwvc3ZnPg==" alt="star" />
-          <img class="w-3 h-3 bg-[rgba(153, 23, 13, 1)]" src="data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSdub25lJyAgd2lkdGg9JzYzJyBoZWlnaHQ9JzYwJyB2aWV3Qm94PScwIDAgNjMgNjAnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTYwLjUxMTEgMjAuODYxOEw0MS45MTQ5IDE4LjE1OTJMMzMuNjAxOSAxLjMwNjE1QzMzLjM3NDkgMC44NDQ3MjMgMzMuMDAxNCAwLjQ3MTE4OCAzMi41Mzk5IDAuMjQ0MTM3QzMxLjM4MjcgLTAuMzI3MTUyIDI5Ljk3NjQgMC4xNDg5MjIgMjkuMzk3OCAxLjMwNjE1TDIxLjA4NDggMTguMTU5MkwyLjQ4ODY2IDIwLjg2MThDMS45NzU5NiAyMC45MzUxIDEuNTA3MjEgMjEuMTc2OCAxLjE0ODMyIDIxLjU0M0MwLjcxNDQ0OSAyMS45ODg5IDAuNDc1MzY0IDIyLjU4ODkgMC40ODM2MDUgMjMuMjExQzAuNDkxODQ1IDIzLjgzMzEgMC43NDY3MzUgMjQuNDI2NSAxLjE5MjI3IDI0Ljg2MDhMMTQuNjQ2OSAzNy45Nzg1TDExLjQ2ODEgNTYuNTAxNUMxMS4zOTM2IDU2LjkzMjMgMTEuNDQxMyA1Ny4zNzU1IDExLjYwNTggNTcuNzgwN0MxMS43NzAzIDU4LjE4NTggMTIuMDQ1IDU4LjUzNjggMTIuMzk4OCA1OC43OTM4QzEyLjc1MjYgNTkuMDUwNyAxMy4xNzE0IDU5LjIwMzQgMTMuNjA3NSA1OS4yMzQ1QzE0LjA0MzcgNTkuMjY1NiAxNC40Nzk5IDU5LjE3MzkgMTQuODY2NiA1OC45Njk3TDMxLjQ5OTkgNTAuMjI0Nkw0OC4xMzMyIDU4Ljk2OTdDNDguNTg3MyA1OS4yMTE0IDQ5LjExNDYgNTkuMjkyIDQ5LjYyIDU5LjIwNDFDNTAuODk0NCA1OC45ODQ0IDUxLjc1MTQgNTcuNzc1OSA1MS41MzE2IDU2LjUwMTVMNDguMzUyOSAzNy45Nzg1TDYxLjgwNzUgMjQuODYwOEM2Mi4xNzM3IDI0LjUwMiA2Mi40MTU0IDI0LjAzMzIgNjIuNDg4NyAyMy41MjA1QzYyLjY4NjQgMjIuMjM4OCA2MS43OTI5IDIxLjA1MjIgNjAuNTExMSAyMC44NjE4WicgZmlsbD0nIzkxOTE5MScvPjwvc3ZnPg==" alt="star" />
-          <img class="w-3 h-3 bg-[rgba(153, 23, 13, 1)]" src="data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSdub25lJyAgd2lkdGg9JzYzJyBoZWlnaHQ9JzYwJyB2aWV3Qm94PScwIDAgNjMgNjAnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTYwLjUxMTEgMjAuODYxOEw0MS45MTQ5IDE4LjE1OTJMMzMuNjAxOSAxLjMwNjE1QzMzLjM3NDkgMC44NDQ3MjMgMzMuMDAxNCAwLjQ3MTE4OCAzMi41Mzk5IDAuMjQ0MTM3QzMxLjM4MjcgLTAuMzI3MTUyIDI5Ljk3NjQgMC4xNDg5MjIgMjkuMzk3OCAxLjMwNjE1TDIxLjA4NDggMTguMTU5MkwyLjQ4ODY2IDIwLjg2MThDMS45NzU5NiAyMC45MzUxIDEuNTA3MjEgMjEuMTc2OCAxLjE0ODMyIDIxLjU0M0MwLjcxNDQ0OSAyMS45ODg5IDAuNDc1MzY0IDIyLjU4ODkgMC40ODM2MDUgMjMuMjExQzAuNDkxODQ1IDIzLjgzMzEgMC43NDY3MzUgMjQuNDI2NSAxLjE5MjI3IDI0Ljg2MDhMMTQuNjQ2OSAzNy45Nzg1TDExLjQ2ODEgNTYuNTAxNUMxMS4zOTM2IDU2LjkzMjMgMTEuNDQxMyA1Ny4zNzU1IDExLjYwNTggNTcuNzgwN0MxMS43NzAzIDU4LjE4NTggMTIuMDQ1IDU4LjUzNjggMTIuMzk4OCA1OC43OTM4QzEyLjc1MjYgNTkuMDUwNyAxMy4xNzE0IDU5LjIwMzQgMTMuNjA3NSA1OS4yMzQ1QzE0LjA0MzcgNTkuMjY1NiAxNC40Nzk5IDU5LjE3MzkgMTQuODY2NiA1OC45Njk3TDMxLjQ5OTkgNTAuMjI0Nkw0OC4xMzMyIDU4Ljk2OTdDNDguNTg3MyA1OS4yMTE0IDQ5LjExNDYgNTkuMjkyIDQ5LjYyIDU5LjIwNDFDNTAuODk0NCA1OC45ODQ0IDUxLjc1MTQgNTcuNzc1OSA1MS41MzE2IDU2LjUwMTVMNDguMzUyOSAzNy45Nzg1TDYxLjgwNzUgMjQuODYwOEM2Mi4xNzM3IDI0LjUwMiA2Mi40MTU0IDI0LjAzMzIgNjIuNDg4NyAyMy41MjA1QzYyLjY4NjQgMjIuMjM4OCA2MS43OTI5IDIxLjA1MjIgNjAuNTExMSAyMC44NjE4WicgZmlsbD0nIzkxOTE5MScvPjwvc3ZnPg==" alt="star" />
-          <img class="w-3 h-3 bg-[rgba(153, 23, 13, 1)]" src="data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSdub25lJyAgd2lkdGg9JzYzJyBoZWlnaHQ9JzYwJyB2aWV3Qm94PScwIDAgNjMgNjAnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTYwLjUxMTEgMjAuODYxOEw0MS45MTQ5IDE4LjE1OTJMMzMuNjAxOSAxLjMwNjE1QzMzLjM3NDkgMC44NDQ3MjMgMzMuMDAxNCAwLjQ3MTE4OCAzMi41Mzk5IDAuMjQ0MTM3QzMxLjM4MjcgLTAuMzI3MTUyIDI5Ljk3NjQgMC4xNDg5MjIgMjkuMzk3OCAxLjMwNjE1TDIxLjA4NDggMTguMTU5MkwyLjQ4ODY2IDIwLjg2MThDMS45NzU5NiAyMC45MzUxIDEuNTA3MjEgMjEuMTc2OCAxLjE0ODMyIDIxLjU0M0MwLjcxNDQ0OSAyMS45ODg5IDAuNDc1MzY0IDIyLjU4ODkgMC40ODM2MDUgMjMuMjExQzAuNDkxODQ1IDIzLjgzMzEgMC43NDY3MzUgMjQuNDI2NSAxLjE5MjI3IDI0Ljg2MDhMMTQuNjQ2OSAzNy45Nzg1TDExLjQ2ODEgNTYuNTAxNUMxMS4zOTM2IDU2LjkzMjMgMTEuNDQxMyA1Ny4zNzU1IDExLjYwNTggNTcuNzgwN0MxMS43NzAzIDU4LjE4NTggMTIuMDQ1IDU4LjUzNjggMTIuMzk4OCA1OC43OTM4QzEyLjc1MjYgNTkuMDUwNyAxMy4xNzE0IDU5LjIwMzQgMTMuNjA3NSA1OS4yMzQ1QzE0LjA0MzcgNTkuMjY1NiAxNC40Nzk5IDU5LjE3MzkgMTQuODY2NiA1OC45Njk3TDMxLjQ5OTkgNTAuMjI0Nkw0OC4xMzMyIDU4Ljk2OTdDNDguNTg3MyA1OS4yMTE0IDQ5LjExNDYgNTkuMjkyIDQ5LjYyIDU5LjIwNDFDNTAuODk0NCA1OC45ODQ0IDUxLjc1MTQgNTcuNzc1OSA1MS41MzE2IDU2LjUwMTVMNDguMzUyOSAzNy45Nzg1TDYxLjgwNzUgMjQuODYwOEM2Mi4xNzM3IDI0LjUwMiA2Mi40MTU0IDI0LjAzMzIgNjIuNDg4NyAyMy41MjA1QzYyLjY4NjQgMjIuMjM4OCA2MS43OTI5IDIxLjA1MjIgNjAuNTExMSAyMC44NjE4WicgZmlsbD0nIzkxOTE5MScvPjwvc3ZnPg==" alt="star" />
-
+          <div class="icon-star h-3 w-3"></div>
+          <div class="icon-star h-3 w-3"></div>
+          <div class="icon-star h-3 w-3"></div>
+          <div class="icon-star h-3 w-3"></div>
+          <div class="icon-star h-3 w-3"></div>
         </div>
         <div class="text-[10px] font-bold bg-[#0f1015] text-white p-1 rounded-xl">chất lượng sản phẩm tuyệt vời</div>
-        <div class="flex gap-2 items-center">
-          <img class="w-5 h-5 bg-[#47aeffbf]" src="data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSdub25lJyAgd2lkdGg9JzU3JyBoZWlnaHQ9JzY5JyB2aWV3Qm94PScwIDAgNTcgNjknIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTI4LjUgMC4xMjVMMC4zNzUgMTIuNjI1VjMxLjM3NUMwLjM3NSA0OC43MTg4IDEyLjM3NSA2NC45Mzc1IDI4LjUgNjguODc1QzQ0LjYyNSA2NC45Mzc1IDU2LjYyNSA0OC43MTg4IDU2LjYyNSAzMS4zNzVWMTIuNjI1TDI4LjUgMC4xMjVaTTM4LjEyNSA0N0wyOC41IDQxLjIxODdMMTguOTA2MyA0N0wyMS40Mzc1IDM2LjA2MjVMMTIuOTY4OCAyOC43NUwyNC4xNTYyIDI3Ljc4MTNMMjguNSAxNy40Njg4TDMyLjg0MzggMjcuNzVMNDQuMDMxMiAyOC43MTg3TDM1LjU2MjUgMzYuMDYyNUwzOC4xMjUgNDdaJyBmaWxsPSdibGFjaycvPjwvc3ZnPg==" alt="">
+        <div class="flex gap-2 items-center absolute right-1/3 bottom-0">
+          <div class="icon-confirm"></div>
           <div class="text-[#47aeffbf] text-xs font-bold">
             Chứng nhận đã mua hàng</div>
         </div>
+      </div>
+      <div class="px-6">
+        <div class="text-lg font-bold">Vũ Thắm | 18/03/2024</div>
+        <div class="text-[13px] font-bold mt-1">Giao hàng tốc độ, nhanh ơi là nhanh. Đóng gói nhìn sang chảnh ghê. Thơm ngọt ngào nma hơi unisex 1 tí
+          theo cảm nhận của mik. Mùi này hợp mùa thu đông, kiểu huyền bí quyến rũ, 1 chút sexy.</div>
+        <img class="w-28 h-40 mt-5" src="https://content.pancake.vn/1/s508x746/fwebp/c4/60/4d/eb/08774f0b0b92d93c199eeddff513e366568b0bc53035792f1f085463-w:1396-h:2048-l:238341-t:image/jpeg.jpg" alt="Image-comment">
+      </div>
+    </div>
+    <div class="pb-5 pt-2 border-b border-black">
+      <div class="flex justify-start items-center gap-5 flex-wrap relative">
+        <div class="w-[71px] h-[72px]">
+          <img class="w-full h-full rounded-full" src="https://content.pancake.vn/1/s471x628/fwebp/34/26/33/fa/440efea9864a4307409f12b7bde33441e034bdf263e61b1299a0ec8c-w:1536-h:2048-l:299940-t:image/jpeg.jpg" alt="Avatar">
+        </div>
+        <div class="flex gap-1">
+          <div class="icon-star h-3 w-3"></div>
+          <div class="icon-star h-3 w-3"></div>
+          <div class="icon-star h-3 w-3"></div>
+          <div class="icon-star h-3 w-3"></div>
+          <div class="icon-star h-3 w-3"></div>
+        </div>
+        <div class="text-[10px] font-bold bg-[#0f1015] text-white p-1 rounded-xl">chất lượng sản phẩm tuyệt vời</div>
+        <div class="flex gap-2 items-center absolute right-1/3 bottom-0">
+          <div class="icon-confirm"></div>
+          <div class="text-[#47aeffbf] text-xs font-bold">
+            Chứng nhận đã mua hàng</div>
+        </div>
+      </div>
+      <div class="px-6">
+        <div class="text-lg font-bold">Vũ Thắm | 18/03/2024</div>
+        <div class="text-[13px] font-bold mt-1">Giao hàng tốc độ, nhanh ơi là nhanh. Đóng gói nhìn sang chảnh ghê. Thơm ngọt ngào nma hơi unisex 1 tí
+          theo cảm nhận của mik. Mùi này hợp mùa thu đông, kiểu huyền bí quyến rũ, 1 chút sexy.</div>
+        <img class="w-28 h-40 mt-5" src="https://content.pancake.vn/1/s508x746/fwebp/c4/60/4d/eb/08774f0b0b92d93c199eeddff513e366568b0bc53035792f1f085463-w:1396-h:2048-l:238341-t:image/jpeg.jpg" alt="Image-comment">
+      </div>
+    </div>
+    <div class="pb-5 pt-2">
+      <div class="flex justify-start items-center gap-5 flex-wrap relative">
+        <div class="w-[75px] h-[75px]">
+          <img class="w-full h-full rounded-full" src="https://content.pancake.vn/1/s484x604/fwebp/28/50/e0/6b/3ea9c88509be44d21efe3a900650422b76e7a7c63c38470f5268c870-w:687-h:856-l:808180-t:image/png.png" alt="Avatar">
+        </div>
+        <div class="flex gap-1">
+          <div class="icon-star h-3 w-3"></div>
+          <div class="icon-star h-3 w-3"></div>
+          <div class="icon-star h-3 w-3"></div>
+          <div class="icon-star h-3 w-3"></div>
+          <div class="icon-star h-3 w-3"></div>
+        </div>
+        <div class="text-[10px] font-bold bg-[#0f1015] text-white p-1 rounded-xl">
+          shop tư vấn nhiệt tình </div>
+        <div class="flex gap-2 items-center absolute right-1/3 bottom-0">
+          <div class="icon-confirm"></div>
+          <div class="text-[#47aeffbf] text-xs font-bold">
+            Chứng nhận đã mua hàng</div>
+        </div>
+      </div>
+      <div class="px-6">
+        <div class="text-lg font-bold">THẢO ANH | 15/07/2024</div>
+        <div class="text-[13px] font-bold mt-1">Sản phẩm tem đầy đủ . Mình k check nhưng chắc là hàng chính hãng . Shop đóng
+            gói hàng có bọc chống sốc . Nước hoa xịt thơm mùi hoa nhài dễ chịu . Với giá tiền này thì cũng hợp lý vì mua
+            về sài được chứ k bị giống nước hoa dởm tốn tiền mà k sài đc . Cho shop 5sao . Đáng đồng tiền bát gạo</div>
+      </div>
+    </div>
+
+    <div class="w-14 h-9 mx-auto pt-5 pb-16">
+      <div class="bg-center bg-cover bg-no-repeat bg-scroll
+              bg-origin-content bg-clip-border w-10 h-10" style="background-image: url('https://content.pancake.vn/1/dlc/33/92/a4/b0/69e71d620d2058c4cfa63a50bc9c8482dab0f3935ca26f8caac7f658-w:250-h:250-l:126172-t:image/gif.gif')"></div>
+    </div>
+
+    <div class="bg-[#ff0000] px-6 py-1 border-t-4 border-black">
+      <div class="text-xl font-bold">Lavera perfume - Thương hiệu nước hoa hàng đầu việt nam </div>
+    </div>
+    <div class="py-5 flex gap-6">
+      <div class="w-20 h-20">
+        <img class="w-full h-full" src="https://content.pancake.vn/1/s476x476/fwebp/69/42/8b/17/044e1c81e0661e368452eb37b794e98537c98854773ee235f4436c4d-w:651-h:651-l:15053-t:image/png.png" alt="Logo">
+      </div>
+      <div class="flex-1 text-base pt-7 break-words font-judson">
+        Những chai nước hoa của nhà LAVERA đa số sẽ thuộc một trong những trường hợp sau:
+        <br>
+        - Là hàng xách tay trực tiếp từ nước ngoài về nên giá sẽ rẻ hơn so với các Shop khác (thường sẽ rẻ hơn 1 nửa).
+        <br>
+        - Những chai nước hoa nhà LAVERA sẽ có hạn sử dụng còn lại tầm 2 năm đến năm 2026 (trong khi các chai nước hoa mới sản xuất
+        sẽ có hạn sử dụng đến 2028), đây cũng là 1 lý do để nước hoa nhà Roma rẻ hơn các shop nước hoa mới.
+        <br>
+        - Nước hoa nhà LAVERA tập trung hầu hết vào bán online, cắt giảm hoạt động tại cửa hàng nên sẽ không tốn nhiều vào
+          các chi phí như: mặt bằng, nhân viên, đầu tư shop,... những phần chi phí đó sẽ được LAVERA đưa vào khuyến mãi cho
+          khách hàng
+        <br>
+        - Tuy nhiên LAVERA Shop cũng có nhược điểm là mẫu mã và số lượng nước hoa sẽ ít hơn các shop khác vì hàng xách
+          tay không mang được số lượng quá nhiều.
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <div class="text-2xl font-bold">THÔNG TIN</div>
+      <div class="text-base pt-2 break-words font-judson">
+        1. lavera perfume là gì
+        <br>
+        2. Quy chế hoạt động
+        <br>
+        3. Hợp tác với Thương hiệu
+        <br>
+        4. Liên hệ
+      </div>
+    </div>
+    <div class="relative">
+      <div class="text-2xl font-bold">CHÍNH SÁCH</div>
+      <div class="text-base pt-2 break-words font-judson">
+        1. Chính sách bảo mật
+        <br>
+        2. Chính sách bảo hành
+        <br>
+        3. Chính sách giao hàng và đổi trả
+        <br>
+        4. Thanh toán
+      </div>
+      <div class="w-[107px] h-10 absolute right-0 bottom-0">
+        <img src="https://content.pancake.vn/1/3e/65/65/19/4989110038f25b22cddd9377f2332a208ce00656622701b75754ae4a-w:975-h:350-l:4108-t:image/webp.png" alt="Payment">
       </div>
     </div>
   </div>
 </div>
 </template>
-<script setup lang="ts">
+
+<script>
+import Slider from "@/pages/Home/Slider.vue"
+export default {
+  components:{
+    Slider
+  }
+}
 </script>
