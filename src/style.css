@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Judson&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -32,6 +33,11 @@ body{
 .font-judson{
     font-family: 'Judson', sans-serif;
 }
+
+.font-roboto{
+    font-family: 'Roboto Slab', sans-serif;
+}
+
 .text-product{
     font-family: 'Judson', sans-serif;
     font-size: 24px;
