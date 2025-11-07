@@ -20,7 +20,7 @@
             <span class="font-normal">{{ item.title }}</span> </div>
           <div class="flex justify-between">
             <div class="text-base line-through">{{ formatPrice(item.oldPrice) }}đ</div>
-            <div  class="text-base text-[#ef1000] font-bold">{{ formatPrice(item.newPrice) }}0đ</div>
+            <div  class="text-base text-[#ef1000] font-bold">{{ formatPrice(item.newPrice) }}đ</div>
           </div>
           <div class="text-base font-bold">Xuất sứ: <span class="font-normal">{{ item.origin }}</span></div>
           <div class="text-base font-bold">Số lượng: <span class="font-normal">Còn lại {{ item.quantity }} sản phẩm</span></div>

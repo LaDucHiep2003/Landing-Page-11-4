@@ -1,6 +1,6 @@
 <template>
   <section id="chanel" class="scroll-smooth py-10">
-    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">NARCISO RODRIGUEZ</div>
+    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">MAISON FRANCIS KURKDJIAN</div>
 
     <div class="flex flex-col gap-6 px-2">
       <div v-for="(item, index) in dataProducts" :key="index" class="flex gap-2 items-center">
@@ -81,72 +81,42 @@ export default {
       isOrderPopupOpen: false,
       dataProducts: [
         {
-          id: 8,
-          thumbnail: "https://content.pancake.vn/1/s552x552/fwebp/56/2a/fa/ec/4ecd1e9fafa1fba93f13a5c8d556df9bbda9886df94af598a2424b7c-w:1200-h:1200-l:13765-t:image/webp.jpg",
-          discount: 68,
-          title: "Narciso Rodriguez For Her Pure Musc - 100ml",
-          oldPrice: 3120000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 9,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/84/07/b0/e7/dd8abdab8039f68d0d5862ae6fa2913311dd95a46af87a2122be25d0-w:600-h:600-l:5975-t:image/webp.jpg",
-          discount: 70,
-          title: "Narciso Rodriguez For Her EDP - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 10,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/dc/7e/18/d4/fa7db9da5f0f9ca6004c16f6555dddbffdbf73d73867551e0ead8b08-w:1200-h:1200-l:203593-t:image/webp.jpg",
-          discount: 71,
-          title: "Narciso Eau de Parfum Poudree - 90ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 31,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/6b/52/48/69/b51463af98d0168481f09d56904a32cc964159f216e554cb71b980c6-w:1200-h:1200-l:50590-t:image/webp.jpg",
-          discount: 71,
-          title: "Narciso Rodriguez For Her Musc Noir Rose - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
+          id: 14,
+          thumbnail: "https://content.pancake.vn/1/s551x551/fwebp/0e/6f/2a/6a/acbdac75220e2932e7d0e6e1cd305b30ee7e57a53eac591cb6a47d34-w:600-h:600-l:21781-t:image/webp.jpg",
+          discount: 75,
+          title: "Baccarat Rouge 540 Extrait de Parfum - 70ml",
+          oldPrice: 8300000,
+          newPrice: 1350000,
           origin: "Pháp",
           quantity: 6
         },
         {
-          id: 32,
-          thumbnail: "https://content.pancake.vn/1/s551x551/fwebp/ef/24/f3/eb/e114ca7b791ccbd22234f2bf6a0885e04b9d0a047deaa1e26367e092-w:1200-h:1200-l:27211-t:image/webp.jpg",
-          discount: 68,
-          title: "Narciso Rodriguez For Her Forever - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
+          id: 300,
+          thumbnail: "https://content.pancake.vn/1/s523x698/fwebp/8e/4e/59/97/57dd084adcfb69191fd0c43d3582ddff7302ca553973a2e7645577e6-w:564-h:752-l:24521-t:image/jpeg.jpg",
+          discount: 85,
+          title: "Baccarat Rouge 540 Extrait de Parfum - 200ml",
+          oldPrice: 13600000,
+          newPrice: 1990000,
+          origin: "Pháp",
+          quantity: 4
+        },
+        {
+          id: 48,
+          thumbnail: "https://content.pancake.vn/1/s552x552/fwebp/ab/01/6a/d7/c63c744e75492fd2effae0c04c1e547027303560906c688f9a0b888e-w:1200-h:1200-l:105828-t:image/webp.jpg",
+          discount: 0,
+          title: "Baccarat Rouge 540 EDP - 70ml",
+          oldPrice: 6300000,
+          newPrice: 6300000,
           origin: "Pháp",
           quantity: 5
         },
         {
-          id: 84,
-          thumbnail: "https://content.pancake.vn/1/s551x551/fwebp/88/29/f0/93/d40dca07008ad1be13018aaab79e7cb33f544ac89a34ec04ce41be9b-w:564-h:564-l:14084-t:image/jpeg.jpg",
-          discount: 69,
-          title: "Narciso Rodriguez For Her Fleur Musc - 100ml",
-          oldPrice: 3250000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 7
-        },
-        {
-          id: 85,
-          thumbnail: "https://content.pancake.vn/1/s551x551/fwebp/ed/fa/ed/39/845e8edba9aed7176afb2af8eeb363b3c133b880e3907c2b33a80a42-w:736-h:736-l:25439-t:image/jpeg.jpg",
-          discount: 71,
-          title: "Narciso Eau de Parfum Cristal - 90ml",
-          oldPrice: 3120000,
-          newPrice: 990000,
+          id: 301,
+          thumbnail: "https://content.pancake.vn/1/s552x552/fwebp/d0/6e/7a/08/db8eb4e01e8905f8063d3a1ce908c5ac5514e93d23b26efde45a3171-w:800-h:800-l:38923-t:image/jpeg.jpg",
+          discount: 85,
+          title: "Baccarat Rouge 540 EDP - 200ml",
+          oldPrice: 12500000,
+          newPrice: 1890000,
           origin: "Pháp",
           quantity: 3
         },

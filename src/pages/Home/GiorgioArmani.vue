@@ -1,6 +1,6 @@
 <template>
   <section id="chanel" class="scroll-smooth py-10">
-    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">NARCISO RODRIGUEZ</div>
+    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">GIORGIO ARMANI</div>
 
     <div class="flex flex-col gap-6 px-2">
       <div v-for="(item, index) in dataProducts" :key="index" class="flex gap-2 items-center">
@@ -81,74 +81,54 @@ export default {
       isOrderPopupOpen: false,
       dataProducts: [
         {
-          id: 8,
-          thumbnail: "https://content.pancake.vn/1/s552x552/fwebp/56/2a/fa/ec/4ecd1e9fafa1fba93f13a5c8d556df9bbda9886df94af598a2424b7c-w:1200-h:1200-l:13765-t:image/webp.jpg",
-          discount: 68,
-          title: "Narciso Rodriguez For Her Pure Musc - 100ml",
-          oldPrice: 3120000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 9,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/84/07/b0/e7/dd8abdab8039f68d0d5862ae6fa2913311dd95a46af87a2122be25d0-w:600-h:600-l:5975-t:image/webp.jpg",
+          id: 15,
+          thumbnail: "https://content.pancake.vn/1/s534x534/fwebp/ca/73/5c/78/e5d72ab98d67678a853bc2001b20295ae7dd3adcd0c0149b42aef351-w:1200-h:1200-l:36439-t:image/webp.jpg",
           discount: 70,
-          title: "Narciso Rodriguez For Her EDP - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
+          title: "Giorgio Armani Acqua Di Gio Pour Homme - 100ml",
+          oldPrice: 2350000,
+          newPrice: 890000,
           origin: "Pháp",
           quantity: 4
         },
         {
-          id: 10,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/dc/7e/18/d4/fa7db9da5f0f9ca6004c16f6555dddbffdbf73d73867551e0ead8b08-w:1200-h:1200-l:203593-t:image/webp.jpg",
-          discount: 71,
-          title: "Narciso Eau de Parfum Poudree - 90ml",
-          oldPrice: 3500000,
+          id: 16,
+          thumbnail: "https://content.pancake.vn/1/s540x540/fwebp/90/72/a7/6d/9f0ee17c396373fac21be3deb2640bda014cd35a61f5ecacde59b0cb-w:600-h:600-l:13117-t:image/webp.jpg",
+          discount: 69,
+          title: "Giorgio Armani Acqua di Gio Profumo - 125ml",
+          oldPrice: 3800000,
           newPrice: 990000,
           origin: "Pháp",
           quantity: 3
         },
         {
-          id: 31,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/6b/52/48/69/b51463af98d0168481f09d56904a32cc964159f216e554cb71b980c6-w:1200-h:1200-l:50590-t:image/webp.jpg",
-          discount: 71,
-          title: "Narciso Rodriguez For Her Musc Noir Rose - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
+          id: 113,
+          thumbnail: "https://content.pancake.vn/1/s546x546/fwebp/d4/0f/d8/46/79cbfb3ee5f8659002302c24b78dcd74c1379d6fc424712c98cb8446-w:600-h:600-l:10707-t:image/webp.jpg",
+          discount: 0,
+          title: "Giorgio Armani Sì Intense - 100ml",
+          oldPrice: 2850000,
+          newPrice: 2850000,
           origin: "Pháp",
-          quantity: 6
+          quantity: 3
         },
         {
-          id: 32,
-          thumbnail: "https://content.pancake.vn/1/s551x551/fwebp/ef/24/f3/eb/e114ca7b791ccbd22234f2bf6a0885e04b9d0a047deaa1e26367e092-w:1200-h:1200-l:27211-t:image/webp.jpg",
-          discount: 68,
-          title: "Narciso Rodriguez For Her Forever - 100ml",
-          oldPrice: 3500000,
+          id: 35,
+          thumbnail: "https://content.pancake.vn/1/s545x545/fwebp/77/d9/b1/b4/8d544fd4a1050448d2a0e9022f3366ae3af4d2741f95a899489c09ba-w:600-h:600-l:18786-t:image/webp.jpg",
+          discount: 75,
+          title: "Giorgio Armani Acqua Di Gio Absolu - 75ml",
+          oldPrice: 2915000,
+          newPrice: 2915000,
+          origin: "Pháp",
+          quantity: 3
+        },
+        {
+          id: 36,
+          thumbnail: "https://content.pancake.vn/1/s547x547/fwebp/78/c9/cb/43/35b34b34732cf91916e7388fd7818803ef98cc83771054199f931899-w:600-h:600-l:11414-t:image/webp.jpg",
+          discount: 69,
+          title: "Giorgio Armani Sì Passione EDP - 100ml",
+          oldPrice: 3600000,
           newPrice: 990000,
           origin: "Pháp",
           quantity: 5
-        },
-        {
-          id: 84,
-          thumbnail: "https://content.pancake.vn/1/s551x551/fwebp/88/29/f0/93/d40dca07008ad1be13018aaab79e7cb33f544ac89a34ec04ce41be9b-w:564-h:564-l:14084-t:image/jpeg.jpg",
-          discount: 69,
-          title: "Narciso Rodriguez For Her Fleur Musc - 100ml",
-          oldPrice: 3250000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 7
-        },
-        {
-          id: 85,
-          thumbnail: "https://content.pancake.vn/1/s551x551/fwebp/ed/fa/ed/39/845e8edba9aed7176afb2af8eeb363b3c133b880e3907c2b33a80a42-w:736-h:736-l:25439-t:image/jpeg.jpg",
-          discount: 71,
-          title: "Narciso Eau de Parfum Cristal - 90ml",
-          oldPrice: 3120000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
         },
       ]
     };

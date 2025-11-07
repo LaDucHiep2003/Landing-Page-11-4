@@ -1,6 +1,6 @@
 <template>
   <section id="chanel" class="scroll-smooth py-10">
-    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">NARCISO RODRIGUEZ</div>
+    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">PARFUMS DE MARLY</div>
 
     <div class="flex flex-col gap-6 px-2">
       <div v-for="(item, index) in dataProducts" :key="index" class="flex gap-2 items-center">
@@ -81,74 +81,64 @@ export default {
       isOrderPopupOpen: false,
       dataProducts: [
         {
-          id: 8,
-          thumbnail: "https://content.pancake.vn/1/s552x552/fwebp/56/2a/fa/ec/4ecd1e9fafa1fba93f13a5c8d556df9bbda9886df94af598a2424b7c-w:1200-h:1200-l:13765-t:image/webp.jpg",
-          discount: 68,
-          title: "Narciso Rodriguez For Her Pure Musc - 100ml",
-          oldPrice: 3120000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 9,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/84/07/b0/e7/dd8abdab8039f68d0d5862ae6fa2913311dd95a46af87a2122be25d0-w:600-h:600-l:5975-t:image/webp.jpg",
+          id: 17,
+          thumbnail: "https://content.pancake.vn/1/s555x555/fwebp/0a/bc/cb/4a/63b7038061990f44556f4eb5b7913bd3eebcd9580e2269d76cb8244b-w:1200-h:1200-l:51778-t:image/webp.jpg",
           discount: 70,
-          title: "Narciso Rodriguez For Her EDP - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 10,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/dc/7e/18/d4/fa7db9da5f0f9ca6004c16f6555dddbffdbf73d73867551e0ead8b08-w:1200-h:1200-l:203593-t:image/webp.jpg",
-          discount: 71,
-          title: "Narciso Eau de Parfum Poudree - 90ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 31,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/6b/52/48/69/b51463af98d0168481f09d56904a32cc964159f216e554cb71b980c6-w:1200-h:1200-l:50590-t:image/webp.jpg",
-          discount: 71,
-          title: "Narciso Rodriguez For Her Musc Noir Rose - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 6
-        },
-        {
-          id: 32,
-          thumbnail: "https://content.pancake.vn/1/s551x551/fwebp/ef/24/f3/eb/e114ca7b791ccbd22234f2bf6a0885e04b9d0a047deaa1e26367e092-w:1200-h:1200-l:27211-t:image/webp.jpg",
-          discount: 68,
-          title: "Narciso Rodriguez For Her Forever - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
+          title: "Parfums De Marly Delina - 75ml",
+          oldPrice: 5800000,
+          newPrice: 1250000,
           origin: "Pháp",
           quantity: 5
         },
         {
-          id: 84,
-          thumbnail: "https://content.pancake.vn/1/s551x551/fwebp/88/29/f0/93/d40dca07008ad1be13018aaab79e7cb33f544ac89a34ec04ce41be9b-w:564-h:564-l:14084-t:image/jpeg.jpg",
-          discount: 69,
-          title: "Narciso Rodriguez For Her Fleur Musc - 100ml",
-          oldPrice: 3250000,
-          newPrice: 990000,
+          id: 37,
+          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/6d/97/96/c2/d04548e6ca204ea0707f1f051be981bd4946fbadc9cb9943331ca7b1-w:600-h:600-l:20559-t:image/webp.jpg",
+          discount: 70,
+          title: "Parfums De Marly Oriana - 75ml",
+          oldPrice: 5800000,
+          newPrice: 1250000,
           origin: "Pháp",
-          quantity: 7
+          quantity: 6
         },
         {
-          id: 85,
-          thumbnail: "https://content.pancake.vn/1/s551x551/fwebp/ed/fa/ed/39/845e8edba9aed7176afb2af8eeb363b3c133b880e3907c2b33a80a42-w:736-h:736-l:25439-t:image/jpeg.jpg",
-          discount: 71,
-          title: "Narciso Eau de Parfum Cristal - 90ml",
-          oldPrice: 3120000,
-          newPrice: 990000,
+          id: 93,
+          thumbnail: "https://content.pancake.vn/1/s550x734/fwebp/29/f4/2a/6d/c09b86f8aff87380826be3448ca7c7829a0abbf693732f4a49534864-w:564-h:752-l:14907-t:image/jpeg.jpg",
+          discount: 70,
+          title: "Parfums De Marly Valaya - 75ml",
+          oldPrice: 5800000,
+          newPrice: 1250000,
           origin: "Pháp",
           quantity: 3
+        },
+        {
+          id: 94,
+          thumbnail: "https://content.pancake.vn/1/s543x679/fwebp/af/71/43/3b/5f0aedb2e40bccba5a1edf28291455788cb1d5289002fc97f1734e17-w:700-h:875-l:36600-t:image/jpeg.jpg",
+          discount: 70,
+          title: "Delina La Roée - 75ml",
+          oldPrice: 5800000,
+          newPrice: 1250000,
+          origin: "Pháp",
+          quantity: 4
+        },
+        {
+          id: 121,
+          thumbnail: "https://content.pancake.vn/1/s550x779/fwebp/11/c6/0b/65/b395dc0fc73fe5f4298dc8a8d2db205561dc150000f9183f7a8b233c-w:1447-h:2048-l:400670-t:image/webp.webp",
+          discount: 72,
+          title: "Marly Delina Exclusif Edition Royale - 75ml",
+          oldPrice: 5900000,
+          newPrice: 1250000,
+          origin: "Pháp",
+          quantity: 2
+        },
+        {
+          id: 302,
+          thumbnail: "https://content.pancake.vn/1/s566x566/fwebp/3a/29/72/4e/eeb8e67e027d86acaa492c83b2c6beb576b0a3004652e9f9fa346046-w:1200-h:1200-l:237360-t:image/jpeg.jpg",
+          discount: 75,
+          title: "Parfums De Marly Palatine EDP - 75ml",
+          oldPrice: 6150000,
+          newPrice: 1350000,
+          origin: "Pháp",
+          quantity: 6
         },
       ]
     };
