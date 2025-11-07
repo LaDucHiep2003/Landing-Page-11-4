@@ -6,10 +6,10 @@
       <div v-for="(item, index) in dataProducts" :key="index" class="flex gap-2 items-center">
         <div class="w-[158px] h-[158px] relative">
           <div class="w-[146px] h-[148px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
-                bg-origin-content bg-clip-border" :style="{ backgroundImage: `url('${item.thumbnail}')` }">></div>
+                bg-origin-content bg-clip-border" :style="{ backgroundImage: `url('${item.thumbnail}')` }"></div>
           <div class="w-[158px] h-[158px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
                 bg-origin-content bg-clip-border" style="background-image: url('https://content.pancake.vn/1/fwebp/fa/66/d5/cd/9186e990dc5541004f05499396c3179cb9cfec72a45d5ae2463b058f-w:150-h:150-l:4225-t:image/svg+xml.svg');"></div>
-          <div class="absolute top-2 left-[133px] text-[8px] font-bold text-white">
+          <div class="absolute top-2 left-[130px] text-[8px] font-bold text-white uppercase">
             Sale
             <br>
             {{item.discount}}%
