@@ -1,15 +1,15 @@
 <template>
-  <section id="christian-dior" class="scroll-smooth py-10">
-    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">CHRISTIAN DIOR</div>
+  <section id="versace" class="scroll-smooth py-10">
+    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">Versace</div>
 
     <div class="flex flex-col gap-6 px-2">
       <div v-for="(item, index) in dataProducts" :key="index" class="flex gap-2 items-center">
         <div class="w-[158px] h-[158px] relative">
           <div class="w-[146px] h-[148px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
-                bg-origin-content bg-clip-border" :style="{ backgroundImage: `url('${item.thumbnail}')` }">></div>
+                bg-origin-content bg-clip-border" :style="{ backgroundImage: `url('${item.thumbnail}')` }"></div>
           <div class="w-[158px] h-[158px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
                 bg-origin-content bg-clip-border" style="background-image: url('https://content.pancake.vn/1/fwebp/fa/66/d5/cd/9186e990dc5541004f05499396c3179cb9cfec72a45d5ae2463b058f-w:150-h:150-l:4225-t:image/svg+xml.svg');"></div>
-          <div class="absolute top-2 left-[133px] text-[8px] font-bold text-white">
+          <div class="absolute top-2 left-[130px] text-[8px] font-bold text-white uppercase">
             Sale
             <br>
             {{item.discount}}%
@@ -81,75 +81,95 @@ export default {
       isOrderPopupOpen: false,
       dataProducts: [
         {
-          id: 18,
-          thumbnail: "https://content.pancake.vn/1/s555x555/fwebp/9d/64/97/23/2da81f90550f1c5e598e59bd0580db075729b6bcdf64408df4649f3b-w:600-h:600-l:12122-t:image/webp.jpg",
-          discount: 72,
-          title: "Dior Sauvage Eau de Parfum - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 6
-        },
-        {
-          id: 19,
-          thumbnail: "https://content.pancake.vn/1/s545x545/fwebp/8b/0d/e4/69/65bf3231cd949fcc7f08b283c6b6a0de0363be6b1d8e52f35b335bec-w:600-h:600-l:44246-t:image/webp.jpg",
+          id: 60,
+          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/d3/74/89/d3/d2c6f715609de6cc0554c2855fdbc03837ba4f46c72235114524a9b6-w:564-h:564-l:33745-t:image/jpeg.jpg",
           discount: 69,
-          title: "Miss Dior Eau De Parfum - 100ml",
-          oldPrice: 2950000,
-          newPrice: 990000,
+          title: "Versace Pour Homme - 100ml",
+          oldPrice: 1990000,
+          newPrice: 890000,
           origin: "Pháp",
-          quantity: 4
+          quantity: 7
         },
         {
-          id: 20,
-          thumbnail: "https://content.pancake.vn/1/s547x547/fwebp/38/65/0b/f9/b5ec4631f50ccf62cc21b13329be763cc43498482f2e244f819acdd8-w:1200-h:1200-l:61992-t:image/webp.jpg",
+          id: 61,
+          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/3e/e0/eb/bc/c58c53652bcbc418a5dd23cdd471d3b0ba200d6d5ab5cf3ce36138cd-w:564-h:564-l:36993-t:image/jpeg.jpg",
           discount: 69,
-          title: "Dior J'adore Eau de Parfum - 100ml",
-          oldPrice: 2850000,
+          title: "Versace Eros Flame - 100ml",
+          oldPrice: 2500000,
           newPrice: 890000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 38,
-          thumbnail: "https://content.pancake.vn/1/s546x546/fwebp/6b/c1/58/09/0796fb6f87b57f19b1ead3c84c78e4b8a73a579b34144d01add19e14-w:600-h:600-l:23369-t:image/webp.jpg",
-          discount: 68,
-          title: "Dior JOY by Dior- 90ml",
-          oldPrice: 2750000,
-          newPrice: 890000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 39,
-          thumbnail: "https://content.pancake.vn/1/s547x547/fwebp/22/52/a7/51/887ca3327d57d2b241caebd2096a961e0694b1c42ba06883c5d9d699-w:1200-h:1200-l:34662-t:image/webp.jpg",
-          discount: 75,
-          title: "Dior Homme Intense - 100ml",
-          oldPrice: 5200000,
-          newPrice: 1290000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 40,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/41/a8/db/6e/7ea2932fe89161d7818c9118668f5d0a331ad364c6ac9c229216f9f6-w:600-h:600-l:35711-t:image/webp.jpg",
-          discount: 73,
-          title: "Dior Miss Dior Blooming Bouquet - 100ml",
-          oldPrice: 2850000,
-          newPrice: 890000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 120,
-          thumbnail: "https://content.pancake.vn/1/s503x584/fwebp/6b/d4/a4/e6/b6c797fa7a23b146aa5ebfbf343a4929ecd93bd17706261c6a34b7e7-w:563-h:653-l:194364-t:image/png.png",
-          discount: 75,
-          title: "Dior Sauvage Elixir -100ml",
-          oldPrice: 4550000,
-          newPrice: 1090000,
           origin: "Pháp",
           quantity: 5
         },
+        {
+          id: 62,
+          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/9b/01/e7/f8/d6f2b1e70ff0771ed02aeb3eaf60ca018f9c3f7fba1392552b2b427b-w:564-h:564-l:36027-t:image/jpeg.jpg",
+          discount: 55,
+          title: "Versace Eros For Men - 100ml",
+          oldPrice: 1990000,
+          newPrice: 890000,
+          origin: "Pháp",
+          quantity: 2
+        },
+        {
+          id: 63,
+          thumbnail: "https://content.pancake.vn/1/fwebp/d1/dc/a4/a8/d10eb131bd9cb9cde77a75614aae0c02ecb3efc8c61569e23d872ebb-w:200-h:200-l:9088-t:image/jpeg.jpg",
+          discount: 0,
+          title: "Versace Dylan Blue Pour Femme EDP - 100ml",
+          oldPrice: 2300000,
+          newPrice: 2300000,
+          origin: "Pháp",
+          quantity: 3
+        },
+        {
+          id: 138,
+          thumbnail: "https://content.pancake.vn/1/fwebp/0a/2b/5b/31/be62068b9b4bba4a29557dcfc4680ed91f91bd3383031d752d894439-w:533-h:730-l:28077-t:image/jpeg.jpg",
+          discount: 55,
+          title: "Versace Eros Energy Pour Homme EDP - 100ml",
+          oldPrice: 1990000,
+          newPrice: 890000,
+          origin: "Pháp",
+          quantity: 4
+        },
+        {
+          id: 139,
+          thumbnail: "https://content.pancake.vn/1/s521x620/fwebp/be/ca/48/f8/17066918a73c5cbb2745aebe1ce5c4edf2cf233c42cbe2f38ea97dc5-w:563-h:669-l:32647-t:image/jpeg.jpg",
+          discount: 55,
+          title: "Versace Versense EDT - 100ml",
+          oldPrice: 1990000,
+          newPrice: 890000,
+          origin: "Pháp",
+          quantity: 4
+        },
+        {
+          id: 135,
+          thumbnail: "https://content.pancake.vn/1/s555x555/fwebp/98/b8/39/12/60068e16605add898bcafa3ed61fc6b49c987dc2232dbd2c786d3899-w:564-h:564-l:20296-t:image/jpeg.jpg",
+          discount: 55,
+          title: "Versace Crystal Noir - 90ml",
+          oldPrice: 1990000,
+          newPrice: 890000,
+          origin: "Pháp",
+          quantity: 4
+        },
+        {
+          id: 136,
+          thumbnail: "https://content.pancake.vn/1/s515x515/fwebp/fc/c8/3f/c1/bbf046b5614e8305dd8cc1ba734e96211e3453dd7a18c34401062336-w:564-h:564-l:43536-t:image/jpeg.jpg",
+          discount: 55,
+          title: "Versace Yellow Diamond - 90ml",
+          oldPrice: 2450000,
+          newPrice: 990000,
+          origin: "Pháp",
+          quantity: 4
+        },
+        {
+          id: 137,
+          thumbnail: "https://content.pancake.vn/1/s515x630/fwebp/e7/88/98/62/6e624fa0244aae4bab2c2c79d1826afd798f0322bdbcc5be588f23b1-w:564-h:689-l:62129-t:image/jpeg.jpg",
+          discount: 55,
+          title: "Versace Bright Crystal Absolu - 90ml",
+          oldPrice: 2450000,
+          newPrice: 990000,
+          origin: "Pháp",
+          quantity: 4
+        }
       ]
     };
   },

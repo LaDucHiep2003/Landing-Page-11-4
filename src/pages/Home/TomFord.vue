@@ -1,12 +1,12 @@
 <template>
-  <section id="chanel" class="scroll-smooth py-10">
+  <section id="tomford" class="scroll-smooth py-10">
     <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">Tomford</div>
 
     <div class="flex flex-col gap-6 px-2">
       <div v-for="(item, index) in dataProducts" :key="index" class="flex gap-2 items-center">
-        <div class="w-[158px] h-[158px] relative">
-          <div class="w-[146px] h-[148px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
-                bg-origin-content bg-clip-border" :style="{ backgroundImage: `url('${item.thumbnail}')` }">></div>
+        <div class="w-[158px] h-[158px] relative flex justify-center items-center">
+          <div class="w-[148px] h-[148px] bg-center bg-cover bg-no-repeat bg-scroll
+                bg-origin-content bg-clip-border" :style="{ backgroundImage: `url('${item.thumbnail}')` }"></div>
           <div class="w-[158px] h-[158px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
                 bg-origin-content bg-clip-border" style="background-image: url('https://content.pancake.vn/1/fwebp/fa/66/d5/cd/9186e990dc5541004f05499396c3179cb9cfec72a45d5ae2463b058f-w:150-h:150-l:4225-t:image/svg+xml.svg');"></div>
           <div class="absolute top-2 left-[133px] text-[8px] font-bold text-white">
@@ -81,74 +81,74 @@ export default {
       isOrderPopupOpen: false,
       dataProducts: [
         {
-          id: 15,
-          thumbnail: "",
+          id: 49,
+          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/1c/d0/18/67/f669fa3f884a4927517069f482e2224f3fe3d7cde03b96ce3c607062-w:600-h:600-l:8282-t:image/webp.jpg",
           discount: 70,
-          title: "",
-          oldPrice: 2350000,
-          newPrice: 890000,
+          title: "Tom Ford Ombré Leather - 100ml",
+          oldPrice: 43500000,
+          newPrice: 1090000,
           origin: "Pháp",
-          quantity: 4
+          quantity: 8
         },
         {
-          id: 15,
-          thumbnail: "",
-          discount: 70,
-          title: "",
-          oldPrice: 2350000,
-          newPrice: 890000,
+          id: 50,
+          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/fa/b1/05/6a/c101ca1004a02a35006f44f2e8c29b22d7701e4c26c39688c2575310-w:600-h:600-l:22816-t:image/webp.jpg",
+          discount: 69,
+          title: "Tom Ford Oud Wood - 50ml",
+          oldPrice: 6500000,
+          newPrice: 1290000,
           origin: "Pháp",
-          quantity: 4
+          quantity: 5
         },
         {
-          id: 15,
-          thumbnail: "",
-          discount: 70,
-          title: "",
-          oldPrice: 2350000,
-          newPrice: 890000,
+          id: 51,
+          thumbnail: "https://content.pancake.vn/1/s548x731/fwebp/66/46/33/22/aef073ce2457be71ce4c469f72032510bb9e820f129b76492c8d37fd-w:564-h:752-l:13236-t:image/jpeg.jpg",
+          discount: 69,
+          title: "Tom Ford Rose Prick EDP - 50ml",
+          oldPrice: 8500000,
+          newPrice: 1290000,
           origin: "Pháp",
-          quantity: 4
+          quantity: 2
         },
         {
-          id: 15,
-          thumbnail: "",
-          discount: 70,
-          title: "",
-          oldPrice: 2350000,
-          newPrice: 890000,
+          id: 52,
+          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/17/b1/fe/44/d59f36cb975925014bae95c804a7cfbdf8250392522733731e28fec9-w:600-h:600-l:18344-t:image/webp.jpg",
+          discount: 83,
+          title: "Tom Ford Lost Cherry Eau de Parfum - 100ml",
+          oldPrice: 9300000,
+          newPrice: 1290000,
           origin: "Pháp",
-          quantity: 4
+          quantity: 7
         },
         {
-          id: 15,
-          thumbnail: "",
-          discount: 70,
-          title: "",
-          oldPrice: 2350000,
-          newPrice: 890000,
+          id: 95,
+          thumbnail: "https://content.pancake.vn/1/fwebp/25/b3/13/eb/9f30108666520f9b256078677b89e9b768c2bb90d44b5f8b6b04d1bf-w:400-h:400-l:11394-t:image/jpeg.jpg",
+          discount: 83,
+          title: "Tom Ford Black Orchid - 100ml",
+          oldPrice: 9300000,
+          newPrice: 1290000,
           origin: "Pháp",
-          quantity: 4
+          quantity: 5
         },
         {
-          id: 15,
-          thumbnail: "",
-          discount: 70,
-          title: "",
-          oldPrice: 2350000,
-          newPrice: 890000,
+          id: 96,
+          thumbnail: "https://content.pancake.vn/1/s496x708/fwebp/05/36/40/54/fb4d415a919905425fb4dc14ce7ae39aa806041fcaa32cab3bc9be98-w:550-h:784-l:37208-t:image/jpeg.jpg",
+          discount: 0,
+          title: "Tom Ford ÉBÈNE FUMÉ EDP  - 100ml",
+          oldPrice: 8500000,
+          newPrice: 1290000,
           origin: "Pháp",
-          quantity: 4
+          quantity: 3
         },
         {
-          id: 15,
-          thumbnail: "",
-          discount: 70,
-          title: "",
-          oldPrice: 2350000,
-          newPrice: 890000,
+          id: 97,
+          thumbnail: "https://content.pancake.vn/1/s529x662/fwebp/b9/b3/43/ed/a0db60b30e23b469d7c48ac8ab245ec0365977a3af33827c4ed43353-w:564-h:705-l:33093-t:image/jpeg.jpg",
+          discount: 83,
+          title: "Tom Ford Neroli Portofino - 50ml",
+          oldPrice: 9300000,
+          newPrice: 1290000,
           origin: "Pháp",
-          quantity: 4
+          quantity: 5
         },
       ]
     };

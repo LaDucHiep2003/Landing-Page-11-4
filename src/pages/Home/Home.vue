@@ -37,6 +37,22 @@
 
     <TomFord />
 
+    <Versace />
+
+    <Burberry />
+
+    <Creed />
+
+    <Roja />
+
+    <Lancome />
+
+    <JeanPaulGaultier />
+
+    <LouisVuitton />
+
+    <Other />
+
     <div class="w-14 h-9 mx-auto pt-16 pb-10">
       <div class="bg-center bg-cover bg-no-repeat bg-scroll
               bg-origin-content bg-clip-border w-14 h-9" style="background-image: url('https://content.pancake.vn/1/dlc/47/b9/bc/a2/5d55a0ce325e62b6b73cf97a9d723a4caeebd03ea06692cecae50708-w:256-h:164-l:97037-t:image/gif.gif')"></div>
@@ -82,7 +98,7 @@
       </div>
     </div>
   </Transition>
-
+<Ordered />
 </template>
 
 <script>
@@ -104,6 +120,15 @@ import Kilian from "@/pages/Home/Kilian.vue";
 import HotPerfume from "@/pages/Home/HotPerfume.vue";
 import Reviews from "@/pages/Home/Reviews.vue";
 import TomFord from "@/pages/Home/TomFord.vue";
+import Versace from "@/pages/Home/Versace.vue";
+import Burberry from "@/pages/Home/Burberry.vue";
+import Creed from "@/pages/Home/Creed.vue";
+import Roja from "@/pages/Home/Roja.vue";
+import Lancome from "@/pages/Home/Lancome.vue";
+import JeanPaulGaultier from "@/pages/Home/JeanPaulGaultier.vue";
+import LouisVuitton from "@/pages/Home/LouisVuitton.vue";
+import Other from "@/pages/Home/Other.vue";
+import Ordered from "@/pages/Home/Ordered.vue";
 
 export default {
   components:{
@@ -124,7 +149,16 @@ export default {
     Kilian,
     HotPerfume,
     Reviews,
-    TomFord
+    TomFord,
+    Versace,
+    Burberry,
+    Creed,
+    Roja,
+    Lancome,
+    JeanPaulGaultier,
+    LouisVuitton,
+    Other,
+    Ordered
   },
   data() {
     return {

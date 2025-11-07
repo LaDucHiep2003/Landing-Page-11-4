@@ -1,5 +1,5 @@
 <template>
-  <section id="chanel" class="scroll-smooth py-10">
+  <section id="narciso" class="scroll-smooth py-10">
     <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">NARCISO RODRIGUEZ</div>
 
     <div class="flex flex-col gap-6 px-2">

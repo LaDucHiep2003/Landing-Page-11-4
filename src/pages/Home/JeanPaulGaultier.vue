@@ -1,15 +1,15 @@
 <template>
-  <section id="yves" class="scroll-smooth py-10">
-    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">Yves Saint Laurent</div>
+  <section id="jean" class="scroll-smooth py-10">
+    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">JEAN PAUL GAULTIER</div>
 
     <div class="flex flex-col gap-6 px-2">
       <div v-for="(item, index) in dataProducts" :key="index" class="flex gap-2 items-center">
-        <div class="w-[158px] h-[158px] relative">
-          <div class="w-[146px] h-[148px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
-                bg-origin-content bg-clip-border" :style="{ backgroundImage: `url('${item.thumbnail}')` }">></div>
+        <div class="w-[158px] h-[158px] relative flex justify-center items-center">
+          <div class="w-[148px] h-[148px] bg-center bg-cover bg-no-repeat bg-scroll
+                bg-origin-content bg-clip-border" :style="{ backgroundImage: `url('${item.thumbnail}')` }"></div>
           <div class="w-[158px] h-[158px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
                 bg-origin-content bg-clip-border" style="background-image: url('https://content.pancake.vn/1/fwebp/fa/66/d5/cd/9186e990dc5541004f05499396c3179cb9cfec72a45d5ae2463b058f-w:150-h:150-l:4225-t:image/svg+xml.svg');"></div>
-          <div class="absolute top-2 left-[133px] text-[8px] font-bold text-white">
+          <div class="absolute top-2 left-[130px] text-[8px] font-bold text-white uppercase">
             Sale
             <br>
             {{item.discount}}%
@@ -81,84 +81,124 @@ export default {
       isOrderPopupOpen: false,
       dataProducts: [
         {
-          id: 11,
-          thumbnail: "https://content.pancake.vn/1/fwebp/b1/d4/c6/f5/456d86fb6cb1bd0efbd909c8345c48fa9ed68019e297fb83b7db450d-w:550-h:550-l:61323-t:image/jpeg.jpg",
-          discount: 71,
-          title: "Yves Saint Laurent Black Opium - 90ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 12,
-          thumbnail: "https://content.pancake.vn/1/s554x554/fwebp/b1/49/e5/f0/ea5ab2df82d77a58e6bc4a08d1b39e5d5020bf6609fe845992a96a46-w:600-h:600-l:17104-t:image/webp.jpg",
+          id: 112,
+          thumbnail: "https://content.pancake.vn/1/s558x558/fwebp/2f/40/33/e8/fc9479cd63eb4f51a88bbd10ef839b6247da50a21e6a8d9aefb65fb4-w:564-h:564-l:23501-t:image/jpeg.jpg",
           discount: 69,
-          title: "Yves Saint Laurent Y Eau de Parfum - 100ml",
+          title: "Jean Paul Gaultier Scandal - 80ml",
           oldPrice: 3200000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 13,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/00/51/6d/74/79ed604e47539373a6679f18b4477f2be41e317f5d252ed4768f87df-w:1200-h:1200-l:50741-t:image/webp.jpg",
-          discount: 75,
-          title: "Yves Saint Laurent Libre EDP - 90ml",
-          oldPrice: 3200000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 33,
-          thumbnail: "https://content.pancake.vn/1/s545x702/fwebp/5e/23/a2/63/2075cae1ebf520264ebb618acb0b90cec9ea9e7bcfa5d472ee2874a6-w:564-h:726-l:35083-t:image/jpeg.jpg",
-          discount: 60,
-          title: "Yves Saint Laurent Mon Paris Intensemet EDP- 90ml",
-          oldPrice: 2550000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 34,
-          thumbnail: "https://content.pancake.vn/1/s547x547/fwebp/01/d8/18/22/7ea006c9b4a6f115e2024292b2b3a525af215b524a355327e8d33ef3-w:550-h:550-l:45403-t:image/jpeg.jpg",
-          discount: 72,
-          title: "Yves Saint Laurent Libre Intense - 90ml",
-          oldPrice: 2950000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 9
-        },
-        {
-          id: 90,
-          thumbnail: "https://content.pancake.vn/1/s547x547/fwebp/50/8d/a0/81/878627aa4b43ead706c02efa204203747e7cac29c628c48bc0211f42-w:564-h:564-l:26062-t:image/jpeg.jpg",
-          discount: 69,
-          title: "Black Opium Eau de Parfum Over Red - 90ml",
-          oldPrice: 5800000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 91,
-          thumbnail: "https://content.pancake.vn/1/s547x547/fwebp/77/1e/7f/e0/5cf5c96df47d0ee321fc831e31de6ee97c74038fa463761325d2d083-w:564-h:564-l:15711-t:image/jpeg.jpg",
-          discount: 70,
-          title: "Yves Saint Laurent Y Le Parfum - 100ml",
-          oldPrice: 3350000,
           newPrice: 990000,
           origin: "Pháp",
           quantity: 5
         },
         {
-          id: 92,
-          thumbnail: "https://content.pancake.vn/1/s536x536/fwebp/6b/ca/43/f3/5efb112cb5b246590db6dc99b20c5a3db677b41def3ce2fda4184ba1-w:564-h:564-l:22801-t:image/jpeg.jpg",
-          discount: 0,
-          title: "Yves Saint Laurent La Nuit De L'Homme - 100ml",
-          oldPrice: 2950000,
-          newPrice: 2950000,
+          id: 123,
+          thumbnail: "https://content.pancake.vn/1/s558x558/fwebp/48/81/c5/10/ba6768113131959b0c8f08f523dac320f9d26e765fac3606d75b8801-w:564-h:564-l:33572-t:image/jpeg.jpg",
+          discount: 69,
+          title: "Jean Paul Gaultier So Scandal - 100ml",
+          oldPrice: 3200000,
+          newPrice: 990000,
           origin: "Pháp",
-          quantity: 4
+          quantity: 5
+        },
+        {
+          id: 124,
+          thumbnail: "https://content.pancake.vn/1/s533x535/fwebp/2f/7d/87/be/4a8c12d0ee38cefe87702e7834be83ab3ea8b322477dfd604b2ec525-w:563-h:565-l:44671-t:image/jpeg.jpg",
+          discount: 69,
+          title: "Jean Paul Gaultier Scandal Absolu Pour Femme - 80m",
+          oldPrice: 3200000,
+          newPrice: 1090000,
+          origin: "Pháp",
+          quantity: 5
+        },
+        {
+          id: 125,
+          thumbnail: "https://content.pancake.vn/1/s537x537/fwebp/16/e1/1e/d8/383233c83247a84913212877f391043c59229d89b8332b817d8cc3e3-w:564-h:564-l:37444-t:image/jpeg.jpg",
+          discount: 69,
+          title: "Jean Paul Gaultier Scandal Le Parfum - 80ml",
+          oldPrice: 3200000,
+          newPrice: 1090000,
+          origin: "Pháp",
+          quantity: 5
+        },
+        {
+          id: 126,
+          thumbnail: "https://content.pancake.vn/1/s539x613/fwebp/34/01/7a/46/9d316ad6b9722598ebbcd19854919def466627d357969ecb8b6ddcbe-w:564-h:641-l:32549-t:image/jpeg.jpg",
+          discount: 0,
+          title: "Jean Paul Gaultier La Belle Le Parfum - 100ml",
+          oldPrice: 3380000,
+          newPrice: 3380000,
+          origin: "Pháp",
+          quantity: 5
+        },
+        {
+          id: 127,
+          thumbnail: "https://content.pancake.vn/1/s504x756/fwebp/fa/8b/d1/0c/388eca7b833258ebf4e6663709b5f2981886a1450f69e1b91113d6b1-w:564-h:846-l:54291-t:image/jpeg.jpg",
+          discount: 0,
+          title: "Jean Paul Gaultier Le Beau for men - 125ml",
+          oldPrice: 2680000,
+          newPrice: 2680000,
+          origin: "Pháp",
+          quantity: 5
+        },
+        {
+          id: 128,
+          thumbnail: "https://content.pancake.vn/1/fwebp/59/1b/e8/d5/5d2cce51938b0b2b2885cc7b9df96e7009d4c24dc3e22aeffb38dd98-w:500-h:500-l:28365-t:image/jpeg.jpg",
+          discount: 69,
+          title: "Jean Paul Gaultier Scandal Absolu Pour Homme - 100ml",
+          oldPrice: 3600000,
+          newPrice: 1090000,
+          origin: "Pháp",
+          quantity: 5
+        },
+        {
+          id: 129,
+          thumbnail: "https://content.pancake.vn/1/s515x696/fwebp/3f/c2/ac/1c/6b1056af57da18253e7efe1bb2ae6a0fce526453abbb36a85aebabff-w:564-h:762-l:46334-t:image/jpeg.jpg",
+          discount: 0,
+          title: "Jean Paul Gaultier Le Male Le Parfum - 75ml",
+          oldPrice: 3200000,
+          newPrice: 3200000,
+          origin: "Pháp",
+          quantity: 5
+        },
+        {
+          id: 130,
+          thumbnail: "https://content.pancake.vn/1/s551x551/fwebp/a8/b8/6d/22/b3e2c825c2fa7eb6d8905de446218abb88600179f65c6c09b3fe9ebe-w:564-h:564-l:41161-t:image/jpeg.jpg",
+          discount: 69,
+          title: "Jean Paul Gaultier Le Male Elixir - 75ml",
+          oldPrice: 3200000,
+          newPrice: 990000,
+          origin: "Pháp",
+          quantity: 5
+        },
+        {
+          id: 131,
+          thumbnail: "https://content.pancake.vn/1/s536x536/fwebp/cd/71/83/ce/dc29a00a7cabefa064b4f95d28a5cadf5a78a014b74b040b7e45ac88-w:564-h:564-l:24921-t:image/jpeg.jpg",
+          discount: 69,
+          title: "Jean Paul Gaultier Ultra Male - 75ml",
+          oldPrice: 3200000,
+          newPrice: 990000,
+          origin: "Pháp",
+          quantity: 5
+        },
+        {
+          id: 132,
+          thumbnail: "https://content.pancake.vn/1/s539x613/fwebp/3c/97/7b/72/c6eec4099e9782e3306e81617ff8a47afc3f78fb3dcd2a2d3c0587ce-w:564-h:641-l:40945-t:image/jpeg.jpg",
+          discount: 69,
+          title: "Jean Paul Gaultier Divine EDP - 100ml",
+          oldPrice: 3200000,
+          newPrice: 990000,
+          origin: "Pháp",
+          quantity: 5
+        },
+        {
+          id: 133,
+          thumbnail: "https://content.pancake.vn/1/s558x558/fwebp/74/89/be/3c/43460b6cfc210d210573787c34bbb90420a6fff0a7821ec1083a36e3-w:564-h:564-l:30683-t:image/jpeg.jpg",
+          discount: 69,
+          title: "Jean Paul Gaultier Scandal Pour Homme Le Parfum - 100ml",
+          oldPrice: 3350000,
+          newPrice: 990000,
+          origin: "Pháp",
+          quantity: 5
         },
       ]
     };

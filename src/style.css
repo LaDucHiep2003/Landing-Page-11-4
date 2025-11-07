@@ -8,7 +8,9 @@
 body{
     color: #000;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 .container {
     /* < 1280 => mobile view */
     /*@apply max-w-none px-4;*/

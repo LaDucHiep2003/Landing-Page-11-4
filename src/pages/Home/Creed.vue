@@ -1,15 +1,15 @@
 <template>
-  <section id="christian-dior" class="scroll-smooth py-10">
-    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">CHRISTIAN DIOR</div>
+  <section id="creed" class="scroll-smooth py-10">
+    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">Creed</div>
 
     <div class="flex flex-col gap-6 px-2">
       <div v-for="(item, index) in dataProducts" :key="index" class="flex gap-2 items-center">
-        <div class="w-[158px] h-[158px] relative">
-          <div class="w-[146px] h-[148px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
-                bg-origin-content bg-clip-border" :style="{ backgroundImage: `url('${item.thumbnail}')` }">></div>
+        <div class="w-[158px] h-[158px] relative flex justify-center items-center">
+          <div class="w-[130px] h-[130px] bg-center bg-cover bg-no-repeat bg-scroll
+                bg-origin-content bg-clip-border" :style="{ backgroundImage: `url('${item.thumbnail}')` }"></div>
           <div class="w-[158px] h-[158px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
                 bg-origin-content bg-clip-border" style="background-image: url('https://content.pancake.vn/1/fwebp/fa/66/d5/cd/9186e990dc5541004f05499396c3179cb9cfec72a45d5ae2463b058f-w:150-h:150-l:4225-t:image/svg+xml.svg');"></div>
-          <div class="absolute top-2 left-[133px] text-[8px] font-bold text-white">
+          <div class="absolute top-2 left-[130px] text-[8px] font-bold text-white uppercase">
             Sale
             <br>
             {{item.discount}}%
@@ -81,74 +81,64 @@ export default {
       isOrderPopupOpen: false,
       dataProducts: [
         {
-          id: 18,
-          thumbnail: "https://content.pancake.vn/1/s555x555/fwebp/9d/64/97/23/2da81f90550f1c5e598e59bd0580db075729b6bcdf64408df4649f3b-w:600-h:600-l:12122-t:image/webp.jpg",
-          discount: 72,
-          title: "Dior Sauvage Eau de Parfum - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
+          id: 99,
+          thumbnail: "https://content.pancake.vn/1/s519x635/fwebp/59/5c/92/f1/19946d981358dc35e2cd9dc07d9c11e7925c934d1c1ae6d505a30411-w:564-h:689-l:36358-t:image/jpeg.jpg",
+          discount: 75,
+          title: " Creed Aventus - 100ml",
+          oldPrice: 8500000,
+          newPrice: 1290000,
           origin: "Pháp",
           quantity: 6
         },
         {
-          id: 19,
-          thumbnail: "https://content.pancake.vn/1/s545x545/fwebp/8b/0d/e4/69/65bf3231cd949fcc7f08b283c6b6a0de0363be6b1d8e52f35b335bec-w:600-h:600-l:44246-t:image/webp.jpg",
-          discount: 69,
-          title: "Miss Dior Eau De Parfum - 100ml",
-          oldPrice: 2950000,
-          newPrice: 990000,
+          id: 80,
+          thumbnail: "https://content.pancake.vn/1/fwebp/11/bd/a9/cd/86db231b192d6b6231545c7b2f9954a549257c5dbcc193e3aaecc795-w:500-h:500-l:29039-t:image/jpeg.jpg",
+          discount: 0,
+          title: "Creed Aventus - 120ml",
+          oldPrice: 10500000,
+          newPrice: 10500000,
           origin: "Pháp",
-          quantity: 4
+          quantity: 0
         },
         {
-          id: 20,
-          thumbnail: "https://content.pancake.vn/1/s547x547/fwebp/38/65/0b/f9/b5ec4631f50ccf62cc21b13329be763cc43498482f2e244f819acdd8-w:1200-h:1200-l:61992-t:image/webp.jpg",
-          discount: 69,
-          title: "Dior J'adore Eau de Parfum - 100ml",
-          oldPrice: 2850000,
-          newPrice: 890000,
+          id: 100,
+          thumbnail: "https://content.pancake.vn/1/fwebp/11/bd/a9/cd/86db231b192d6b6231545c7b2f9954a549257c5dbcc193e3aaecc795-w:500-h:500-l:29039-t:image/jpeg.jpg",
+          discount: 0,
+          title: "Creed Aventus For Her EDP - 75ml",
+          oldPrice: 7755000,
+          newPrice: 7750000,
           origin: "Pháp",
-          quantity: 4
+          quantity: 1
         },
         {
-          id: 38,
-          thumbnail: "https://content.pancake.vn/1/s546x546/fwebp/6b/c1/58/09/0796fb6f87b57f19b1ead3c84c78e4b8a73a579b34144d01add19e14-w:600-h:600-l:23369-t:image/webp.jpg",
-          discount: 68,
-          title: "Dior JOY by Dior- 90ml",
-          oldPrice: 2750000,
-          newPrice: 890000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 39,
-          thumbnail: "https://content.pancake.vn/1/s547x547/fwebp/22/52/a7/51/887ca3327d57d2b241caebd2096a961e0694b1c42ba06883c5d9d699-w:1200-h:1200-l:34662-t:image/webp.jpg",
-          discount: 75,
-          title: "Dior Homme Intense - 100ml",
-          oldPrice: 5200000,
-          newPrice: 1290000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 40,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/41/a8/db/6e/7ea2932fe89161d7818c9118668f5d0a331ad364c6ac9c229216f9f6-w:600-h:600-l:35711-t:image/webp.jpg",
-          discount: 73,
-          title: "Dior Miss Dior Blooming Bouquet - 100ml",
-          oldPrice: 2850000,
-          newPrice: 890000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 120,
-          thumbnail: "https://content.pancake.vn/1/s503x584/fwebp/6b/d4/a4/e6/b6c797fa7a23b146aa5ebfbf343a4929ecd93bd17706261c6a34b7e7-w:563-h:653-l:194364-t:image/png.png",
-          discount: 75,
-          title: "Dior Sauvage Elixir -100ml",
-          oldPrice: 4550000,
-          newPrice: 1090000,
+          id: 101,
+          thumbnail: "https://content.pancake.vn/1/s519x662/fwebp/68/02/cf/8a/d34d11552e613d394acdcc28d86334a19948e807278cf5347a4fc71f-w:533-h:679-l:11756-t:image/jpeg.jpg",
+          discount: 70,
+          title: "Creed Silver Mountain Water - 100ml",
+          oldPrice: 7750000,
+          newPrice: 1250000,
           origin: "Pháp",
           quantity: 5
+        },
+        {
+          id: 102,
+          thumbnail: "https://content.pancake.vn/1/s548x731/fwebp/fa/d6/e4/09/3fec123585b9692c9bbaa9fa71066dc2b849bb9ec7e6267146c22fae-w:564-h:752-l:17808-t:image/jpeg.jpg",
+          discount: 0,
+          title: "Creed Green Irish Tweed - 100ml",
+          oldPrice: 7750000,
+          newPrice: 7750000,
+          origin: "Pháp",
+          quantity: 4
+        },
+        {
+          id: 104,
+          thumbnail: "https://content.pancake.vn/1/s548x731/fwebp/3a/75/a0/47/1cc7b8746388c79151054aaab5c559df0870455f84a9f240f0a3f0f5-w:564-h:752-l:22939-t:image/jpeg.jpg",
+          discount: 0,
+          title: "Creed Millesime Imperial - 100ml",
+          oldPrice: 7750000,
+          newPrice: 7750000,
+          origin: "Pháp",
+          quantity: 1
         },
       ]
     };

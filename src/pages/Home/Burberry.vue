@@ -1,15 +1,15 @@
 <template>
-  <section id="christian-dior" class="scroll-smooth py-10">
-    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">CHRISTIAN DIOR</div>
+  <section id="berberry" class="scroll-smooth py-10">
+    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">Burberry</div>
 
     <div class="flex flex-col gap-6 px-2">
       <div v-for="(item, index) in dataProducts" :key="index" class="flex gap-2 items-center">
-        <div class="w-[158px] h-[158px] relative">
-          <div class="w-[146px] h-[148px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
-                bg-origin-content bg-clip-border" :style="{ backgroundImage: `url('${item.thumbnail}')` }">></div>
+        <div class="w-[158px] h-[158px] relative flex justify-center items-center">
+          <div class="w-[115px] h-[127px] bg-center bg-cover bg-no-repeat bg-scroll
+                bg-origin-content bg-clip-border" :style="{ backgroundImage: `url('${item.thumbnail}')` }"></div>
           <div class="w-[158px] h-[158px] absolute top-0 left-0 bg-center bg-cover bg-no-repeat bg-scroll
                 bg-origin-content bg-clip-border" style="background-image: url('https://content.pancake.vn/1/fwebp/fa/66/d5/cd/9186e990dc5541004f05499396c3179cb9cfec72a45d5ae2463b058f-w:150-h:150-l:4225-t:image/svg+xml.svg');"></div>
-          <div class="absolute top-2 left-[133px] text-[8px] font-bold text-white">
+          <div class="absolute top-2 left-[130px] text-[8px] font-bold text-white uppercase">
             Sale
             <br>
             {{item.discount}}%
@@ -81,72 +81,52 @@ export default {
       isOrderPopupOpen: false,
       dataProducts: [
         {
-          id: 18,
-          thumbnail: "https://content.pancake.vn/1/s555x555/fwebp/9d/64/97/23/2da81f90550f1c5e598e59bd0580db075729b6bcdf64408df4649f3b-w:600-h:600-l:12122-t:image/webp.jpg",
-          discount: 72,
-          title: "Dior Sauvage Eau de Parfum - 100ml",
+          id: 65,
+          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/fwebp/90/d1/62/5c/468d6604f8b95340affb5164e920d32511e63e027de35e3bfbba9d86.jpg",
+          discount: 68,
+          title: "My Burberry - 90ml",
+          oldPrice: 3080000,
+          newPrice: 990000,
+          origin: "Pháp",
+          quantity: 5
+        },
+        {
+          id: 66,
+          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/38/2d/36/73/0b5de3bac8a02964ad8731d6d009b7ec598025c938ac03ff4970fbeb-w:620-h:620-l:36469-t:image/jpeg.jpg",
+          discount: 0,
+          title: "My Burberry Blush - 90ml",
+          oldPrice: 3080000,
+          newPrice: 3080000,
+          origin: "Pháp",
+          quantity: 4
+        },
+        {
+          id: 67,
+          thumbnail: "https://content.pancake.vn/1/s548x640/fwebp/4b/24/a1/e5/be688199e899ae0c4c37276e83b2243010755f4f8d9ba5363d969ff9-w:735-h:858-l:23610-t:image/jpeg.jpg",
+          discount: 0,
+          title: "Burberry Her - 100ml",
+          oldPrice: 4500000,
+          newPrice: 4500000,
+          origin: "Pháp",
+          quantity: 5
+        },
+        {
+          id: 68,
+          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/4b/9e/78/23/9491edfc4be670e32922900bf3e30a6bd0971df56ea657cb2162f592-w:1200-h:1200-l:27902-t:image/webp.webp",
+          discount: 75,
+          title: "Burberry Hero - 100ml",
           oldPrice: 3500000,
           newPrice: 990000,
           origin: "Pháp",
-          quantity: 6
+          quantity: 4
         },
         {
-          id: 19,
-          thumbnail: "https://content.pancake.vn/1/s545x545/fwebp/8b/0d/e4/69/65bf3231cd949fcc7f08b283c6b6a0de0363be6b1d8e52f35b335bec-w:600-h:600-l:44246-t:image/webp.jpg",
-          discount: 69,
-          title: "Miss Dior Eau De Parfum - 100ml",
-          oldPrice: 2950000,
+          id: 69,
+          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/0d/ac/3f/e4/81d3dfb7a10dbb6ed6c5f2f26822b18d6d44b6c90b4e14a05177030e-w:564-h:564-l:40754-t:image/jpeg.jpg",
+          discount: 0,
+          title: "Burberry London for Women - 100ml",
+          oldPrice: 4350000,
           newPrice: 990000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 20,
-          thumbnail: "https://content.pancake.vn/1/s547x547/fwebp/38/65/0b/f9/b5ec4631f50ccf62cc21b13329be763cc43498482f2e244f819acdd8-w:1200-h:1200-l:61992-t:image/webp.jpg",
-          discount: 69,
-          title: "Dior J'adore Eau de Parfum - 100ml",
-          oldPrice: 2850000,
-          newPrice: 890000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 38,
-          thumbnail: "https://content.pancake.vn/1/s546x546/fwebp/6b/c1/58/09/0796fb6f87b57f19b1ead3c84c78e4b8a73a579b34144d01add19e14-w:600-h:600-l:23369-t:image/webp.jpg",
-          discount: 68,
-          title: "Dior JOY by Dior- 90ml",
-          oldPrice: 2750000,
-          newPrice: 890000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 39,
-          thumbnail: "https://content.pancake.vn/1/s547x547/fwebp/22/52/a7/51/887ca3327d57d2b241caebd2096a961e0694b1c42ba06883c5d9d699-w:1200-h:1200-l:34662-t:image/webp.jpg",
-          discount: 75,
-          title: "Dior Homme Intense - 100ml",
-          oldPrice: 5200000,
-          newPrice: 1290000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 40,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/41/a8/db/6e/7ea2932fe89161d7818c9118668f5d0a331ad364c6ac9c229216f9f6-w:600-h:600-l:35711-t:image/webp.jpg",
-          discount: 73,
-          title: "Dior Miss Dior Blooming Bouquet - 100ml",
-          oldPrice: 2850000,
-          newPrice: 890000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 120,
-          thumbnail: "https://content.pancake.vn/1/s503x584/fwebp/6b/d4/a4/e6/b6c797fa7a23b146aa5ebfbf343a4929ecd93bd17706261c6a34b7e7-w:563-h:653-l:194364-t:image/png.png",
-          discount: 75,
-          title: "Dior Sauvage Elixir -100ml",
-          oldPrice: 4550000,
-          newPrice: 1090000,
           origin: "Pháp",
           quantity: 5
         },

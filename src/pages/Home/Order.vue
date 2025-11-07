@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-[30px] relative overflow-hidden flex justify-center items-center mt-6">
+  <section class="rounded-[30px] relative overflow-hidden flex justify-center items-center mt-6">
     <div class="absolute inset-0 bg-order-banner bg-center bg-cover bg-no-repeat opacity-60"></div>
     <div class="relative z-10 py-6 px-4">
       <h2 class="text-3xl font-bold mb-8 text-center">ĐẶT HÀNG TẠI ĐÂY</h2>
@@ -39,7 +39,7 @@
         </div>
       </form>
     </div>
-  </div>
+  </section>
 </template>
 <script setup lang="ts">
 </script>
