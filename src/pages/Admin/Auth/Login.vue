@@ -26,7 +26,7 @@
 
 <script>
 import Cookies from 'js-cookie';
-import {login} from "@/service/authService.js";
+import {login} from "@/Service/authService.js";
 export default {
   data(){
     return{
