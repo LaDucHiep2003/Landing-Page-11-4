@@ -19,7 +19,7 @@
           <div class="text-base text-center font-bold"> Mã {{ formatId(item.id) }} -
             <span class="font-normal">{{ item.title }}</span> </div>
           <div class="flex justify-between">
-            <div class="text-base line-through">{{ formatPrice(item.oldPrice) }}đ</div>
+            <div class="text-base line-through">{{ formatPrice(item.price) }}đ</div>
             <div  class="text-base text-[#ef1000] font-bold">{{ formatPrice(item.newPrice) }}đ</div>
           </div>
           <div class="text-base font-bold">Xuất sứ: <span class="font-normal">{{ item.origin }}</span></div>
@@ -71,6 +71,7 @@
 
 <script>
 import Order from "@/pages/Home/Order.vue";
+import {getProducts} from "@/Service/productsService.js";
 
 export default {
   components: {
@@ -80,66 +81,6 @@ export default {
     return {
       isOrderPopupOpen: false,
       dataProducts: [
-        {
-          id: 1,
-          thumbnail: "https://content.pancake.vn/1/s546x546/fwebp/8c/7f/cf/21/77d3d1adf63a3a93c5fcb094b2aecb87b2b017055570ad440af798a6-w:600-h:600-l:16858-t:image/webp.jpg",
-          discount: 71,
-          title: "01 - Chanel Chance Eau Tendre EDP - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 8
-        },
-        {
-          id: 46,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/19/de/e9/54/69bb9bb4e126213baf6cd43f33486cee38b3c5da79f7107dd387d7b9-w:1200-h:1200-l:50690-t:image/webp.jpg",
-          discount: 71,
-          title: "Chanel Chance Eau Fraiche EDT - 100ml",
-          oldPrice: 3500000,
-          newPrice: 900000,
-          origin: "Pháp",
-          quantity: 9
-        },
-        {
-          id: 47,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/db/37/b0/c7/ed8572b29e8be825ea384883652ecfe9af1cabfbc8d25ece51c3e7a7-w:1200-h:1200-l:54832-t:image/webp.jpg",
-          discount: 71,
-          title: "Chanel Chance Eau de Parfum - 100ml",
-          oldPrice: 3500000,
-          newPrice: 900000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 75,
-          thumbnail: "https://content.pancake.vn/1/s549x549/fwebp/b7/da/d5/44/3e64717db9b144a437b753630ecfdc8694b7a62bad3f246f4432b7aa-w:564-h:564-l:15774-t:image/jpeg.jpg",
-          discount: 72,
-          title: "Chanel Coco EDT - 100ml",
-          oldPrice: 3500000,
-          newPrice: 3500000,
-          origin: "Pháp",
-          quantity: 7
-        },
-        {
-          id: 2,
-          thumbnail: "https://content.pancake.vn/1/s558x558/fwebp/38/eb/5f/70/4cc7e5feee5ca6ff7c3c9535d563e45126bcf96b102af9334d35a54b-w:600-h:600-l:26902-t:image/webp.jpg",
-          discount: 72,
-          title: "Chanel Coco Mademoiselle Intense - 100ml",
-          oldPrice: 3500000,
-          newPrice: 900000,
-          origin: "Pháp",
-          quantity: 5
-        },
-        {
-          id: 83,
-          thumbnail: "https://content.pancake.vn/1/s546x728/fwebp/08/a0/97/b4/c79418f791aa99ec0e93f202bae35b7c8135595fbe408d430005e99a-w:564-h:752-l:24586-t:image/jpeg.jpg",
-          discount: 0,
-          title: "Chanel Allure Homme EDT - 100ml",
-          oldPrice: 3200000,
-          newPrice: 3200000,
-          origin: "Pháp",
-          quantity: 4
-        }
       ]
     };
   },
@@ -157,11 +98,23 @@ export default {
     },
     formatPrice(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
+    },
+    async loadProducts() {
+      try {
+        const result = await getProducts({ brandId : 1});
+        console.log(result)
+        this.dataProducts = result.result;
+      } catch (err) {
+        console.log("Lỗi khi lấy danh sách sản phẩm", err);
+      }
+    },
   },
   beforeUnmount() {
     document.body.style.overflow = '';
   },
+  mounted() {
+    this.loadProducts();
+  }
 };
 </script>
 

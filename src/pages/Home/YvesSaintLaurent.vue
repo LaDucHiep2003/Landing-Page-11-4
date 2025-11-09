@@ -19,7 +19,7 @@
           <div class="text-base text-center font-bold"> Mã {{ formatId(item.id) }} -
             <span class="font-normal">{{ item.title }}</span> </div>
           <div class="flex justify-between">
-            <div class="text-base line-through">{{ formatPrice(item.oldPrice) }}đ</div>
+            <div class="text-base line-through">{{ formatPrice(item.price) }}đ</div>
             <div  class="text-base text-[#ef1000] font-bold">{{ formatPrice(item.newPrice) }}đ</div>
           </div>
           <div class="text-base font-bold">Xuất sứ: <span class="font-normal">{{ item.origin }}</span></div>
@@ -71,6 +71,7 @@
 
 <script>
 import Order from "@/pages/Home/Order.vue";
+import {getProducts} from "@/Service/productsService.js";
 
 export default {
   components: {
@@ -79,88 +80,7 @@ export default {
   data() {
     return {
       isOrderPopupOpen: false,
-      dataProducts: [
-        {
-          id: 11,
-          thumbnail: "https://content.pancake.vn/1/fwebp/b1/d4/c6/f5/456d86fb6cb1bd0efbd909c8345c48fa9ed68019e297fb83b7db450d-w:550-h:550-l:61323-t:image/jpeg.jpg",
-          discount: 71,
-          title: "Yves Saint Laurent Black Opium - 90ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 12,
-          thumbnail: "https://content.pancake.vn/1/s554x554/fwebp/b1/49/e5/f0/ea5ab2df82d77a58e6bc4a08d1b39e5d5020bf6609fe845992a96a46-w:600-h:600-l:17104-t:image/webp.jpg",
-          discount: 69,
-          title: "Yves Saint Laurent Y Eau de Parfum - 100ml",
-          oldPrice: 3200000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 13,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/00/51/6d/74/79ed604e47539373a6679f18b4477f2be41e317f5d252ed4768f87df-w:1200-h:1200-l:50741-t:image/webp.jpg",
-          discount: 75,
-          title: "Yves Saint Laurent Libre EDP - 90ml",
-          oldPrice: 3200000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 33,
-          thumbnail: "https://content.pancake.vn/1/s545x702/fwebp/5e/23/a2/63/2075cae1ebf520264ebb618acb0b90cec9ea9e7bcfa5d472ee2874a6-w:564-h:726-l:35083-t:image/jpeg.jpg",
-          discount: 60,
-          title: "Yves Saint Laurent Mon Paris Intensemet EDP- 90ml",
-          oldPrice: 2550000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 34,
-          thumbnail: "https://content.pancake.vn/1/s547x547/fwebp/01/d8/18/22/7ea006c9b4a6f115e2024292b2b3a525af215b524a355327e8d33ef3-w:550-h:550-l:45403-t:image/jpeg.jpg",
-          discount: 72,
-          title: "Yves Saint Laurent Libre Intense - 90ml",
-          oldPrice: 2950000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 9
-        },
-        {
-          id: 90,
-          thumbnail: "https://content.pancake.vn/1/s547x547/fwebp/50/8d/a0/81/878627aa4b43ead706c02efa204203747e7cac29c628c48bc0211f42-w:564-h:564-l:26062-t:image/jpeg.jpg",
-          discount: 69,
-          title: "Black Opium Eau de Parfum Over Red - 90ml",
-          oldPrice: 5800000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 91,
-          thumbnail: "https://content.pancake.vn/1/s547x547/fwebp/77/1e/7f/e0/5cf5c96df47d0ee321fc831e31de6ee97c74038fa463761325d2d083-w:564-h:564-l:15711-t:image/jpeg.jpg",
-          discount: 70,
-          title: "Yves Saint Laurent Y Le Parfum - 100ml",
-          oldPrice: 3350000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 5
-        },
-        {
-          id: 92,
-          thumbnail: "https://content.pancake.vn/1/s536x536/fwebp/6b/ca/43/f3/5efb112cb5b246590db6dc99b20c5a3db677b41def3ce2fda4184ba1-w:564-h:564-l:22801-t:image/jpeg.jpg",
-          discount: 0,
-          title: "Yves Saint Laurent La Nuit De L'Homme - 100ml",
-          oldPrice: 2950000,
-          newPrice: 2950000,
-          origin: "Pháp",
-          quantity: 4
-        },
-      ]
+      dataProducts: []
     };
   },
   methods: {
@@ -177,11 +97,23 @@ export default {
     },
     formatPrice(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
+    },
+    async loadProducts() {
+      try {
+        const result = await getProducts({ brandId : 4});
+        console.log(result)
+        this.dataProducts = result.result;
+      } catch (err) {
+        console.log("Lỗi khi lấy danh sách sản phẩm", err);
+      }
+    },
   },
   beforeUnmount() {
     document.body.style.overflow = '';
   },
+  mounted() {
+    this.loadProducts();
+  }
 };
 </script>
 

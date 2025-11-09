@@ -19,7 +19,7 @@
           <div class="text-base text-center font-bold"> Mã {{ formatId(item.id) }} -
             <span class="font-normal">{{ item.title }}</span> </div>
           <div class="flex justify-between">
-            <div class="text-base line-through">{{ formatPrice(item.oldPrice) }}đ</div>
+            <div class="text-base line-through">{{ formatPrice(item.price) }}đ</div>
             <div  class="text-base text-[#ef1000] font-bold">{{ formatPrice(item.newPrice) }}đ</div>
           </div>
           <div class="text-base font-bold">Xuất sứ: <span class="font-normal">{{ item.origin }}</span></div>
@@ -71,6 +71,7 @@
 
 <script>
 import Order from "@/pages/Home/Order.vue";
+import {getProducts} from "@/Service/productsService.js";
 
 export default {
   components: {
@@ -79,58 +80,7 @@ export default {
   data() {
     return {
       isOrderPopupOpen: false,
-      dataProducts: [
-        {
-          id: 43,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/bc/3b/23/34/2a5dc72bd93ea11eb19fab317dc8d4ac04a6851eb1ffa313a75b8fd2-w:600-h:600-l:31545-t:image/webp.jpg",
-          discount: 0,
-          title: "Kilian Voulez-Vous Coucher Avec Moi - 50ml",
-          oldPrice: 6350000,
-          newPrice: 6350000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 44,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/55/c3/fa/01/b6e936c4d451f49948d7ecaf95ba4a06fe20d6dede5d4a1978062b38-w:600-h:600-l:16303-t:image/webp.jpg",
-          discount: 75,
-          title: "Kilian Good Girl Gone Bad - 50ml",
-          oldPrice: 8500000,
-          newPrice: 1490000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 110,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/79/ab/34/2d/b9165b8ccd050106f0f93a1210ee202dd79e06611ffb968db19062d8-w:564-h:564-l:28262-t:image/jpeg.jpg",
-          discount: 69,
-          title: "Kilian Good Girl Gone Bad Eau Fraiche - 50ml",
-          oldPrice: 5500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 5
-        },
-        {
-          id: 45,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/2c/ca/be/78/0bc9ab5f683e2a1c63ad76db0b5d58019285e454309e5aa667f928d0-w:1200-h:1200-l:56724-t:image/webp.webp",
-          discount: 75,
-          title: "Kilian Black Phantom - Memento Mori - 50ml",
-          oldPrice: 8500000,
-          newPrice: 1490000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 70,
-          thumbnail: "https://content.pancake.vn/1/s548x714/fwebp/f4/81/f6/f8/f2bcfddd1e54ab93d49c5416850840a41bb0acf25e1b52334e37bc58-w:736-h:958-l:35847-t:image/jpeg.jpg",
-          discount: 0,
-          title: "Kilian Rolling in Love - 50ml",
-          oldPrice: 6900000,
-          newPrice: 6900000,
-          origin: "Pháp",
-          quantity: 4
-        },
-      ]
+      dataProducts: []
     };
   },
   methods: {
@@ -147,11 +97,22 @@ export default {
     },
     formatPrice(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
+    },
+    async loadProducts() {
+      try {
+        const result = await getProducts({ brandId : 9});
+        this.dataProducts = result.result;
+      } catch (err) {
+        console.log("Lỗi khi lấy danh sách sản phẩm", err);
+      }
+    },
   },
   beforeUnmount() {
     document.body.style.overflow = '';
   },
+  mounted() {
+    this.loadProducts();
+  }
 };
 </script>
 

@@ -19,7 +19,7 @@
           <div class="text-base text-center font-bold"> Mã {{ formatId(item.id) }} -
             <span class="font-normal">{{ item.title }}</span> </div>
           <div class="flex justify-between">
-            <div class="text-base line-through">{{ formatPrice(item.oldPrice) }}đ</div>
+            <div class="text-base line-through">{{ formatPrice(item.price) }}đ</div>
             <div  class="text-base text-[#ef1000] font-bold">{{ formatPrice(item.newPrice) }}đ</div>
           </div>
           <div class="text-base font-bold">Xuất sứ: <span class="font-normal">{{ item.origin }}</span></div>
@@ -71,6 +71,7 @@
 
 <script>
 import Order from "@/pages/Home/Order.vue";
+import {getProducts} from "@/Service/productsService.js";
 
 export default {
   components: {
@@ -79,58 +80,7 @@ export default {
   data() {
     return {
       isOrderPopupOpen: false,
-      dataProducts: [
-        {
-          id: 140,
-          thumbnail: "https://content.pancake.vn/1/s548x714/fwebp/19/b8/44/2f/2fa2c2bd8532ca292c4b8a457f6490f25926fbf961bdce154c0f71df-w:564-h:734-l:22144-t:image/jpeg.jpg",
-          discount: 69,
-          title: "Louis Vuitton California Dream  - 100ml",
-          oldPrice: 9450000,
-          newPrice: 1490000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 141,
-          thumbnail: "https://content.pancake.vn/1/fwebp/53/88/54/4d/bfc11580a6bb9920360c3a659711c0a6c1c80b617c0a62034919362e-w:320-h:320-l:9240-t:image/jpeg.jpg",
-          discount: 68,
-          title: "Louis Vuitton On The Beach EDP  - 100ml",
-          oldPrice: 6800000,
-          newPrice: 1490000,
-          origin: "Pháp",
-          quantity: 5
-        },
-        {
-          id: 142,
-          thumbnail: "https://content.pancake.vn/1/s553x553/fwebp/c9/77/8f/8c/5fbeb0e8d25bfa24de7781f9ed2a765d949c06c5ac3fba7f33e91220-w:601-h:600-l:284143-t:image/png.png",
-          discount: 75,
-          title: "LV Lovers - 100ml",
-          oldPrice: 8500000,
-          newPrice: 1490000,
-          origin: "Pháp",
-          quantity: 2
-        },
-        {
-          id: 200,
-          thumbnail: "https://content.pancake.vn/1/s547x547/fwebp/3f/6f/77/4a/f069fa451639de94d24e274c667e830dd563ee2b327e44acbae70bfd-w:1200-h:1200-l:73676-t:image/jpeg.jpg",
-          discount: 75,
-          title: "Louis Vuitton ",
-          oldPrice: 8900000,
-          newPrice: 1490000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 201,
-          thumbnail: "https://content.pancake.vn/1/s538x538/fwebp/fe/3c/ac/83/d137f3aa70356114453c4a2f8a7e1879ecbcdb2a11cc454c592e428b-w:1200-h:1200-l:65768-t:image/jpeg.jpg",
-          discount: 75,
-          title: "Louis Vuitton Les Sables Roses - 100ml",
-          oldPrice: 8600000,
-          newPrice: 1490000,
-          origin: "Pháp",
-          quantity: 3
-        },
-      ]
+      dataProducts: []
     };
   },
   methods: {
@@ -147,11 +97,22 @@ export default {
     },
     formatPrice(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
+    },
+    async loadProducts() {
+      try {
+        const result = await getProducts({ brandId : 17});
+        this.dataProducts = result.result;
+      } catch (err) {
+        console.log("Lỗi khi lấy danh sách sản phẩm", err);
+      }
+    },
   },
   beforeUnmount() {
     document.body.style.overflow = '';
   },
+  mounted() {
+    this.loadProducts();
+  }
 };
 </script>
 

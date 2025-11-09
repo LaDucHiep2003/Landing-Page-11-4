@@ -19,7 +19,7 @@
           <div class="text-base text-center font-bold"> Mã {{ formatId(item.id) }} -
             <span class="font-normal">{{ item.title }}</span> </div>
           <div class="flex justify-between">
-            <div class="text-base line-through">{{ formatPrice(item.oldPrice) }}đ</div>
+            <div class="text-base line-through">{{ formatPrice(item.price) }}đ</div>
             <div  class="text-base text-[#ef1000] font-bold">{{ formatPrice(item.newPrice) }}đ</div>
           </div>
           <div class="text-base font-bold">Xuất sứ: <span class="font-normal">{{ item.origin }}</span></div>
@@ -71,6 +71,7 @@
 
 <script>
 import Order from "@/pages/Home/Order.vue";
+import {getProducts} from "@/Service/productsService.js";
 
 export default {
   components: {
@@ -79,78 +80,7 @@ export default {
   data() {
     return {
       isOrderPopupOpen: false,
-      dataProducts: [
-        {
-          id: 8,
-          thumbnail: "https://content.pancake.vn/1/s552x552/fwebp/56/2a/fa/ec/4ecd1e9fafa1fba93f13a5c8d556df9bbda9886df94af598a2424b7c-w:1200-h:1200-l:13765-t:image/webp.jpg",
-          discount: 68,
-          title: "Narciso Rodriguez For Her Pure Musc - 100ml",
-          oldPrice: 3120000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 9,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/84/07/b0/e7/dd8abdab8039f68d0d5862ae6fa2913311dd95a46af87a2122be25d0-w:600-h:600-l:5975-t:image/webp.jpg",
-          discount: 70,
-          title: "Narciso Rodriguez For Her EDP - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 10,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/dc/7e/18/d4/fa7db9da5f0f9ca6004c16f6555dddbffdbf73d73867551e0ead8b08-w:1200-h:1200-l:203593-t:image/webp.jpg",
-          discount: 71,
-          title: "Narciso Eau de Parfum Poudree - 90ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 31,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/6b/52/48/69/b51463af98d0168481f09d56904a32cc964159f216e554cb71b980c6-w:1200-h:1200-l:50590-t:image/webp.jpg",
-          discount: 71,
-          title: "Narciso Rodriguez For Her Musc Noir Rose - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 6
-        },
-        {
-          id: 32,
-          thumbnail: "https://content.pancake.vn/1/s551x551/fwebp/ef/24/f3/eb/e114ca7b791ccbd22234f2bf6a0885e04b9d0a047deaa1e26367e092-w:1200-h:1200-l:27211-t:image/webp.jpg",
-          discount: 68,
-          title: "Narciso Rodriguez For Her Forever - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 5
-        },
-        {
-          id: 84,
-          thumbnail: "https://content.pancake.vn/1/s551x551/fwebp/88/29/f0/93/d40dca07008ad1be13018aaab79e7cb33f544ac89a34ec04ce41be9b-w:564-h:564-l:14084-t:image/jpeg.jpg",
-          discount: 69,
-          title: "Narciso Rodriguez For Her Fleur Musc - 100ml",
-          oldPrice: 3250000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 7
-        },
-        {
-          id: 85,
-          thumbnail: "https://content.pancake.vn/1/s551x551/fwebp/ed/fa/ed/39/845e8edba9aed7176afb2af8eeb363b3c133b880e3907c2b33a80a42-w:736-h:736-l:25439-t:image/jpeg.jpg",
-          discount: 71,
-          title: "Narciso Eau de Parfum Cristal - 90ml",
-          oldPrice: 3120000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-      ]
+      dataProducts: []
     };
   },
   methods: {
@@ -167,11 +97,22 @@ export default {
     },
     formatPrice(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
+    },
+    async loadProducts() {
+      try {
+        const result = await getProducts({ brandId : 3});
+        this.dataProducts = result.result;
+      } catch (err) {
+        console.log("Lỗi khi lấy danh sách sản phẩm", err);
+      }
+    },
   },
   beforeUnmount() {
     document.body.style.overflow = '';
   },
+  mounted() {
+    this.loadProducts();
+  }
 };
 </script>
 

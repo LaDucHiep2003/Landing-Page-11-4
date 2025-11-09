@@ -19,7 +19,7 @@
           <div class="text-base text-center font-bold"> Mã {{ formatId(item.id) }} -
             <span class="font-normal">{{ item.title }}</span> </div>
           <div class="flex justify-between">
-            <div class="text-base line-through">{{ formatPrice(item.oldPrice) }}đ</div>
+            <div class="text-base line-through">{{ formatPrice(item.price) }}đ</div>
             <div  class="text-base text-[#ef1000] font-bold">{{ formatPrice(item.newPrice) }}đ</div>
           </div>
           <div class="text-base font-bold">Xuất sứ: <span class="font-normal">{{ item.origin }}</span></div>
@@ -71,6 +71,7 @@
 
 <script>
 import Order from "@/pages/Home/Order.vue";
+import {getProducts} from "@/Service/productsService.js";
 
 export default {
   components: {
@@ -79,48 +80,7 @@ export default {
   data() {
     return {
       isOrderPopupOpen: false,
-      dataProducts: [
-        {
-          id: 14,
-          thumbnail: "https://content.pancake.vn/1/s551x551/fwebp/0e/6f/2a/6a/acbdac75220e2932e7d0e6e1cd305b30ee7e57a53eac591cb6a47d34-w:600-h:600-l:21781-t:image/webp.jpg",
-          discount: 75,
-          title: "Baccarat Rouge 540 Extrait de Parfum - 70ml",
-          oldPrice: 8300000,
-          newPrice: 1350000,
-          origin: "Pháp",
-          quantity: 6
-        },
-        {
-          id: 300,
-          thumbnail: "https://content.pancake.vn/1/s523x698/fwebp/8e/4e/59/97/57dd084adcfb69191fd0c43d3582ddff7302ca553973a2e7645577e6-w:564-h:752-l:24521-t:image/jpeg.jpg",
-          discount: 85,
-          title: "Baccarat Rouge 540 Extrait de Parfum - 200ml",
-          oldPrice: 13600000,
-          newPrice: 1990000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 48,
-          thumbnail: "https://content.pancake.vn/1/s552x552/fwebp/ab/01/6a/d7/c63c744e75492fd2effae0c04c1e547027303560906c688f9a0b888e-w:1200-h:1200-l:105828-t:image/webp.jpg",
-          discount: 0,
-          title: "Baccarat Rouge 540 EDP - 70ml",
-          oldPrice: 6300000,
-          newPrice: 6300000,
-          origin: "Pháp",
-          quantity: 5
-        },
-        {
-          id: 301,
-          thumbnail: "https://content.pancake.vn/1/s552x552/fwebp/d0/6e/7a/08/db8eb4e01e8905f8063d3a1ce908c5ac5514e93d23b26efde45a3171-w:800-h:800-l:38923-t:image/jpeg.jpg",
-          discount: 85,
-          title: "Baccarat Rouge 540 EDP - 200ml",
-          oldPrice: 12500000,
-          newPrice: 1890000,
-          origin: "Pháp",
-          quantity: 3
-        },
-      ]
+      dataProducts: []
     };
   },
   methods: {
@@ -137,11 +97,22 @@ export default {
     },
     formatPrice(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
+    },
+    async loadProducts() {
+      try {
+        const result = await getProducts({ brandId : 5});
+        this.dataProducts = result.result;
+      } catch (err) {
+        console.log("Lỗi khi lấy danh sách sản phẩm", err);
+      }
+    },
   },
   beforeUnmount() {
     document.body.style.overflow = '';
   },
+  mounted() {
+    this.loadProducts();
+  }
 };
 </script>
 

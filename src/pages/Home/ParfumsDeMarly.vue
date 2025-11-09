@@ -19,7 +19,7 @@
           <div class="text-base text-center font-bold"> Mã {{ formatId(item.id) }} -
             <span class="font-normal">{{ item.title }}</span> </div>
           <div class="flex justify-between">
-            <div class="text-base line-through">{{ formatPrice(item.oldPrice) }}đ</div>
+            <div class="text-base line-through">{{ formatPrice(item.price) }}đ</div>
             <div  class="text-base text-[#ef1000] font-bold">{{ formatPrice(item.newPrice) }}đ</div>
           </div>
           <div class="text-base font-bold">Xuất sứ: <span class="font-normal">{{ item.origin }}</span></div>
@@ -71,6 +71,7 @@
 
 <script>
 import Order from "@/pages/Home/Order.vue";
+import {getProducts} from "@/Service/productsService.js";
 
 export default {
   components: {
@@ -79,68 +80,7 @@ export default {
   data() {
     return {
       isOrderPopupOpen: false,
-      dataProducts: [
-        {
-          id: 17,
-          thumbnail: "https://content.pancake.vn/1/s555x555/fwebp/0a/bc/cb/4a/63b7038061990f44556f4eb5b7913bd3eebcd9580e2269d76cb8244b-w:1200-h:1200-l:51778-t:image/webp.jpg",
-          discount: 70,
-          title: "Parfums De Marly Delina - 75ml",
-          oldPrice: 5800000,
-          newPrice: 1250000,
-          origin: "Pháp",
-          quantity: 5
-        },
-        {
-          id: 37,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/6d/97/96/c2/d04548e6ca204ea0707f1f051be981bd4946fbadc9cb9943331ca7b1-w:600-h:600-l:20559-t:image/webp.jpg",
-          discount: 70,
-          title: "Parfums De Marly Oriana - 75ml",
-          oldPrice: 5800000,
-          newPrice: 1250000,
-          origin: "Pháp",
-          quantity: 6
-        },
-        {
-          id: 93,
-          thumbnail: "https://content.pancake.vn/1/s550x734/fwebp/29/f4/2a/6d/c09b86f8aff87380826be3448ca7c7829a0abbf693732f4a49534864-w:564-h:752-l:14907-t:image/jpeg.jpg",
-          discount: 70,
-          title: "Parfums De Marly Valaya - 75ml",
-          oldPrice: 5800000,
-          newPrice: 1250000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 94,
-          thumbnail: "https://content.pancake.vn/1/s543x679/fwebp/af/71/43/3b/5f0aedb2e40bccba5a1edf28291455788cb1d5289002fc97f1734e17-w:700-h:875-l:36600-t:image/jpeg.jpg",
-          discount: 70,
-          title: "Delina La Roée - 75ml",
-          oldPrice: 5800000,
-          newPrice: 1250000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 121,
-          thumbnail: "https://content.pancake.vn/1/s550x779/fwebp/11/c6/0b/65/b395dc0fc73fe5f4298dc8a8d2db205561dc150000f9183f7a8b233c-w:1447-h:2048-l:400670-t:image/webp.webp",
-          discount: 72,
-          title: "Marly Delina Exclusif Edition Royale - 75ml",
-          oldPrice: 5900000,
-          newPrice: 1250000,
-          origin: "Pháp",
-          quantity: 2
-        },
-        {
-          id: 302,
-          thumbnail: "https://content.pancake.vn/1/s566x566/fwebp/3a/29/72/4e/eeb8e67e027d86acaa492c83b2c6beb576b0a3004652e9f9fa346046-w:1200-h:1200-l:237360-t:image/jpeg.jpg",
-          discount: 75,
-          title: "Parfums De Marly Palatine EDP - 75ml",
-          oldPrice: 6150000,
-          newPrice: 1350000,
-          origin: "Pháp",
-          quantity: 6
-        },
-      ]
+      dataProducts: []
     };
   },
   methods: {
@@ -157,11 +97,22 @@ export default {
     },
     formatPrice(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
+    },
+    async loadProducts() {
+      try {
+        const result = await getProducts({ brandId : 10});
+        this.dataProducts = result.result;
+      } catch (err) {
+        console.log("Lỗi khi lấy danh sách sản phẩm", err);
+      }
+    },
   },
   beforeUnmount() {
     document.body.style.overflow = '';
   },
+  mounted() {
+    this.loadProducts();
+  }
 };
 </script>
 

@@ -19,7 +19,7 @@
           <div class="text-base text-center font-bold"> Mã {{ formatId(item.id) }} -
             <span class="font-normal">{{ item.title }}</span> </div>
           <div class="flex justify-between">
-            <div class="text-base line-through">{{ formatPrice(item.oldPrice) }}đ</div>
+            <div class="text-base line-through">{{ formatPrice(item.price) }}đ</div>
             <div  class="text-base text-[#ef1000] font-bold">{{ formatPrice(item.newPrice) }}đ</div>
           </div>
           <div class="text-base font-bold">Xuất sứ: <span class="font-normal">{{ item.origin }}</span></div>
@@ -71,6 +71,7 @@
 
 <script>
 import Order from "@/pages/Home/Order.vue";
+import {getProducts} from "@/Service/productsService.js";
 
 export default {
   components: {
@@ -79,58 +80,7 @@ export default {
   data() {
     return {
       isOrderPopupOpen: false,
-      dataProducts: [
-        {
-          id: 65,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/fwebp/90/d1/62/5c/468d6604f8b95340affb5164e920d32511e63e027de35e3bfbba9d86.jpg",
-          discount: 68,
-          title: "My Burberry - 90ml",
-          oldPrice: 3080000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 5
-        },
-        {
-          id: 66,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/38/2d/36/73/0b5de3bac8a02964ad8731d6d009b7ec598025c938ac03ff4970fbeb-w:620-h:620-l:36469-t:image/jpeg.jpg",
-          discount: 0,
-          title: "My Burberry Blush - 90ml",
-          oldPrice: 3080000,
-          newPrice: 3080000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 67,
-          thumbnail: "https://content.pancake.vn/1/s548x640/fwebp/4b/24/a1/e5/be688199e899ae0c4c37276e83b2243010755f4f8d9ba5363d969ff9-w:735-h:858-l:23610-t:image/jpeg.jpg",
-          discount: 0,
-          title: "Burberry Her - 100ml",
-          oldPrice: 4500000,
-          newPrice: 4500000,
-          origin: "Pháp",
-          quantity: 5
-        },
-        {
-          id: 68,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/4b/9e/78/23/9491edfc4be670e32922900bf3e30a6bd0971df56ea657cb2162f592-w:1200-h:1200-l:27902-t:image/webp.webp",
-          discount: 75,
-          title: "Burberry Hero - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 69,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/0d/ac/3f/e4/81d3dfb7a10dbb6ed6c5f2f26822b18d6d44b6c90b4e14a05177030e-w:564-h:564-l:40754-t:image/jpeg.jpg",
-          discount: 0,
-          title: "Burberry London for Women - 100ml",
-          oldPrice: 4350000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 5
-        },
-      ]
+      dataProducts: []
     };
   },
   methods: {
@@ -147,11 +97,22 @@ export default {
     },
     formatPrice(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
+    },
+    async loadProducts() {
+      try {
+        const result = await getProducts({ brandId : 13});
+        this.dataProducts = result.result;
+      } catch (err) {
+        console.log("Lỗi khi lấy danh sách sản phẩm", err);
+      }
+    },
   },
   beforeUnmount() {
     document.body.style.overflow = '';
   },
+  mounted() {
+    this.loadProducts();
+  }
 };
 </script>
 

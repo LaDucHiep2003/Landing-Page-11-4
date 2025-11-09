@@ -19,7 +19,7 @@
           <div class="text-base text-center font-bold"> Mã {{ formatId(item.id) }} -
             <span class="font-normal">{{ item.title }}</span> </div>
           <div class="flex justify-between">
-            <div class="text-base line-through">{{ formatPrice(item.oldPrice) }}đ</div>
+            <div class="text-base line-through">{{ formatPrice(item.price) }}đ</div>
             <div  class="text-base text-[#ef1000] font-bold">{{ formatPrice(item.newPrice) }}đ</div>
           </div>
           <div class="text-base font-bold">Xuất sứ: <span class="font-normal">{{ item.origin }}</span></div>
@@ -71,6 +71,7 @@
 
 <script>
 import Order from "@/pages/Home/Order.vue";
+import {getProducts} from "@/Service/productsService.js";
 
 export default {
   components: {
@@ -79,58 +80,7 @@ export default {
   data() {
     return {
       isOrderPopupOpen: false,
-      dataProducts: [
-        {
-          id: 15,
-          thumbnail: "https://content.pancake.vn/1/s534x534/fwebp/ca/73/5c/78/e5d72ab98d67678a853bc2001b20295ae7dd3adcd0c0149b42aef351-w:1200-h:1200-l:36439-t:image/webp.jpg",
-          discount: 70,
-          title: "Giorgio Armani Acqua Di Gio Pour Homme - 100ml",
-          oldPrice: 2350000,
-          newPrice: 890000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 16,
-          thumbnail: "https://content.pancake.vn/1/s540x540/fwebp/90/72/a7/6d/9f0ee17c396373fac21be3deb2640bda014cd35a61f5ecacde59b0cb-w:600-h:600-l:13117-t:image/webp.jpg",
-          discount: 69,
-          title: "Giorgio Armani Acqua di Gio Profumo - 125ml",
-          oldPrice: 3800000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 113,
-          thumbnail: "https://content.pancake.vn/1/s546x546/fwebp/d4/0f/d8/46/79cbfb3ee5f8659002302c24b78dcd74c1379d6fc424712c98cb8446-w:600-h:600-l:10707-t:image/webp.jpg",
-          discount: 0,
-          title: "Giorgio Armani Sì Intense - 100ml",
-          oldPrice: 2850000,
-          newPrice: 2850000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 35,
-          thumbnail: "https://content.pancake.vn/1/s545x545/fwebp/77/d9/b1/b4/8d544fd4a1050448d2a0e9022f3366ae3af4d2741f95a899489c09ba-w:600-h:600-l:18786-t:image/webp.jpg",
-          discount: 75,
-          title: "Giorgio Armani Acqua Di Gio Absolu - 75ml",
-          oldPrice: 2915000,
-          newPrice: 2915000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 36,
-          thumbnail: "https://content.pancake.vn/1/s547x547/fwebp/78/c9/cb/43/35b34b34732cf91916e7388fd7818803ef98cc83771054199f931899-w:600-h:600-l:11414-t:image/webp.jpg",
-          discount: 69,
-          title: "Giorgio Armani Sì Passione EDP - 100ml",
-          oldPrice: 3600000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 5
-        },
-      ]
+      dataProducts: []
     };
   },
   methods: {
@@ -147,11 +97,23 @@ export default {
     },
     formatPrice(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
+    },
+    async loadProducts() {
+      try {
+        const result = await getProducts({ brandId : 6});
+        console.log(result)
+        this.dataProducts = result.result;
+      } catch (err) {
+        console.log("Lỗi khi lấy danh sách sản phẩm", err);
+      }
+    },
   },
   beforeUnmount() {
     document.body.style.overflow = '';
   },
+  mounted() {
+    this.loadProducts();
+  }
 };
 </script>
 

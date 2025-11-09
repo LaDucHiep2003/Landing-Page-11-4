@@ -19,7 +19,7 @@
           <div class="text-base text-center font-bold"> Mã {{ formatId(item.id) }} -
             <span class="font-normal">{{ item.title }}</span> </div>
           <div class="flex justify-between">
-            <div class="text-base line-through">{{ formatPrice(item.oldPrice) }}đ</div>
+            <div class="text-base line-through">{{ formatPrice(item.price) }}đ</div>
             <div  class="text-base text-[#ef1000] font-bold">{{ formatPrice(item.newPrice) }}đ</div>
           </div>
           <div class="text-base font-bold">Xuất sứ: <span class="font-normal">{{ item.origin }}</span></div>
@@ -71,6 +71,7 @@
 
 <script>
 import Order from "@/pages/Home/Order.vue";
+import {getProducts} from "@/Service/productsService.js";
 
 export default {
   components: {
@@ -79,58 +80,7 @@ export default {
   data() {
     return {
       isOrderPopupOpen: false,
-      dataProducts: [
-        {
-          id: 117,
-          thumbnail: "https://content.pancake.vn/1/s548x701/fwebp/25/1c/14/ff/ff61cebff866d1a152e86e500314f92e1aa7556dd262875e57655448-w:563-h:720-l:22947-t:image/jpeg.jpg",
-          discount: 68,
-          title: "Lancome La Vie Est Belle - 75ml",
-          oldPrice: 4800000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 153,
-          thumbnail: "https://content.pancake.vn/1/s558x558/fwebp/ae/db/ea/6d/c5f96b58070ee4f4fdd686a41f659eeb41df12cd55b11c692797a3bb-w:564-h:564-l:17430-t:image/jpeg.jpg",
-          discount: 75,
-          title: "Lancome Tresor Midnight Rose - 75ml",
-          oldPrice: 2350000,
-          newPrice: 890000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 137,
-          thumbnail: "https://content.pancake.vn/1/s558x558/fwebp/43/20/9f/f2/888295a237d733739a380a93166536de9577a017de1e826dd698a810-w:564-h:564-l:14726-t:image/jpeg.jpg",
-          discount: 68,
-          title: "Lancome Tresor In Love - 75ml",
-          oldPrice: 2230000,
-          newPrice: 890000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 156,
-          thumbnail: "https://content.pancake.vn/1/s558x558/fwebp/d2/05/21/1f/248c6c9b4a08783013548fdac159cb791890f47f976ffd6869c25733-w:564-h:564-l:18146-t:image/jpeg.jpg",
-          discount: 0,
-          title: "Lancome La Vie est Belle en Rose - 100ml",
-          oldPrice: 2500000,
-          newPrice: 2500000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 134,
-          thumbnail: "https://content.pancake.vn/1/s558x558/fwebp/b6/08/a1/32/cf7d03efa4e5804a07ce50a508ab790d934760d8fc455c3b2742a01a-w:564-h:564-l:23669-t:image/jpeg.jpg",
-          discount: 0,
-          title: "Lancome La Vie est Belle L'eclat - 75ml",
-          oldPrice: 2050000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-      ]
+      dataProducts: []
     };
   },
   methods: {
@@ -147,11 +97,22 @@ export default {
     },
     formatPrice(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
+    },
+    async loadProducts() {
+      try {
+        const result = await getProducts({ brandId : 16});
+        this.dataProducts = result.result;
+      } catch (err) {
+        console.log("Lỗi khi lấy danh sách sản phẩm", err);
+      }
+    },
   },
   beforeUnmount() {
     document.body.style.overflow = '';
   },
+  mounted() {
+    this.loadProducts();
+  }
 };
 </script>
 

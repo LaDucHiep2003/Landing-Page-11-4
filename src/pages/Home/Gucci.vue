@@ -19,7 +19,7 @@
           <div class="text-base text-center font-bold"> Mã {{ formatId(item.id) }} -
             <span class="font-normal">{{ item.title }}</span> </div>
           <div class="flex justify-between">
-            <div class="text-base line-through">{{ formatPrice(item.oldPrice) }}đ</div>
+            <div class="text-base line-through">{{ formatPrice(item.price) }}đ</div>
             <div  class="text-base text-[#ef1000] font-bold">{{ formatPrice(item.newPrice) }}đ</div>
           </div>
           <div class="text-base font-bold">Xuất sứ: <span class="font-normal">{{ item.origin }}</span></div>
@@ -71,6 +71,7 @@
 
 <script>
 import Order from "@/pages/Home/Order.vue";
+import {getProducts} from "@/Service/productsService.js";
 
 export default {
   components: {
@@ -80,66 +81,6 @@ export default {
     return {
       isOrderPopupOpen: false,
       dataProducts: [
-        {
-          id: 5,
-          thumbnail: "https://content.pancake.vn/1/s549x549/fwebp/b6/f5/82/e7/8ad2236e730108f4d9d0b153c4243c389317d101fad43bc3f2fa8669-w:1200-h:1200-l:513568-t:image/png.png",
-          discount: 71,
-          title: "Gucci Bloom EDP For Her - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 5
-        },
-        {
-          id: 6,
-          thumbnail: "https://content.pancake.vn/1/s558x558/fwebp/0f/e9/19/c5/3f1c626294aecca4c0c249baee21116f7937eac95237b539455bbf16-w:1200-h:1200-l:67708-t:image/webp.jpg",
-          discount: 69,
-          title: "Gucci Flora Gorgeous Gardenia Eau de Parfum - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 8
-        },
-        {
-          id: 7,
-          thumbnail: "https://content.pancake.vn/1/s555x555/fwebp/58/1f/ba/ed/1c82da7361dbe0eb4d4f697037615f7ca1742293f0f6f0e94110eda8-w:1200-h:1200-l:81953-t:image/webp.jpg",
-          discount: 69,
-          title: "Gucci Flora Gorgeous Jasmine - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 27,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/74/16/45/e0/8b2260a49ffe3222c3fa91112796b6981827086873925f3325f8e449-w:600-h:600-l:8583-t:image/webp.jpg",
-          discount: 0,
-          title: " Gucci Bloom Ambrosia di Fiori EDP for Woman - 100ml",
-          oldPrice: 3300000,
-          newPrice: 3300000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 28,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/76/e5/5f/3a/651801c6940fc484fffcac8ba968e88de5c0ea0f1c1af56dfee821fe-w:600-h:600-l:17211-t:image/webp.jpg",
-          discount: 71,
-          title: "Gucci Bloom EDT - 100ml",
-          oldPrice: 3500000,
-          newPrice: 990000,
-          origin: "Pháp",
-          quantity: 2
-        },
-        {
-          id: 29,
-          thumbnail: "https://content.pancake.vn/1/s552x552/fwebp/70/b5/8f/d4/d3531102e2b8386876e33fb31a42c5f3ceb0704aa4545e7d06bd2e63-w:600-h:600-l:25971-t:image/webp.jpg",
-          discount: 0,
-          title: "Gucci Bloom Nettare Di Fiori - 100ml",
-          oldPrice: 3200000,
-          newPrice: 3200000,
-          origin: "Pháp",
-          quantity: 3
-        },
       ]
     };
   },
@@ -157,11 +98,22 @@ export default {
     },
     formatPrice(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
+    },
+    async loadProducts() {
+      try {
+        const result = await getProducts({ brandId : 2});
+        this.dataProducts = result.result;
+      } catch (err) {
+        console.log("Lỗi khi lấy danh sách sản phẩm", err);
+      }
+    },
   },
   beforeUnmount() {
     document.body.style.overflow = '';
   },
+  mounted() {
+    this.loadProducts();
+  }
 };
 </script>
 

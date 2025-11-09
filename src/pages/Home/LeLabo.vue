@@ -19,7 +19,7 @@
           <div class="text-base text-center font-bold"> Mã {{ formatId(item.id) }} -
             <span class="font-normal">{{ item.title }}</span> </div>
           <div class="flex justify-between">
-            <div class="text-base line-through">{{ formatPrice(item.oldPrice) }}đ</div>
+            <div class="text-base line-through">{{ formatPrice(item.price) }}đ</div>
             <div  class="text-base text-[#ef1000] font-bold">{{ formatPrice(item.newPrice) }}đ</div>
           </div>
           <div class="text-base font-bold">Xuất sứ: <span class="font-normal">{{ item.origin }}</span></div>
@@ -71,6 +71,7 @@
 
 <script>
 import Order from "@/pages/Home/Order.vue";
+import {getProducts} from "@/Service/productsService.js";
 
 export default {
   components: {
@@ -79,58 +80,7 @@ export default {
   data() {
     return {
       isOrderPopupOpen: false,
-      dataProducts: [
-        {
-          id: 21,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/d5/ba/a7/71/09d7dc51a6892d9be541621dcbd9fbc66e5a4cf0456c401b4817073e-w:1200-h:1200-l:89348-t:image/webp.jpg",
-          discount: 75,
-          title: "Le Labo Another 13 - 100ml",
-          oldPrice: 6500000,
-          newPrice: 1390000,
-          origin: "Pháp",
-          quantity: 5
-        },
-        {
-          id: 22,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/d5/ba/a7/71/09d7dc51a6892d9be541621dcbd9fbc66e5a4cf0456c401b4817073e-w:1200-h:1200-l:89348-t:image/webp.jpg",
-          discount: 75,
-          title: "Le Labo Another 31 - 100ml",
-          oldPrice: 6500000,
-          newPrice: 1390000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 23,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/d5/ba/a7/71/09d7dc51a6892d9be541621dcbd9fbc66e5a4cf0456c401b4817073e-w:1200-h:1200-l:89348-t:image/webp.jpg",
-          discount: 75,
-          title: "Le Labo Another 33 - 100ml",
-          oldPrice: 6500000,
-          newPrice: 1390000,
-          origin: "Pháp",
-          quantity: 3
-        },
-        {
-          id: 41,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/d5/ba/a7/71/09d7dc51a6892d9be541621dcbd9fbc66e5a4cf0456c401b4817073e-w:1200-h:1200-l:89348-t:image/webp.jpg",
-          discount: 75,
-          title: "Le Labo Another 41 - 100ml",
-          oldPrice: 6500000,
-          newPrice: 1390000,
-          origin: "Pháp",
-          quantity: 2
-        },
-        {
-          id: 42,
-          thumbnail: "https://content.pancake.vn/1/s550x550/fwebp/d5/ba/a7/71/09d7dc51a6892d9be541621dcbd9fbc66e5a4cf0456c401b4817073e-w:1200-h:1200-l:89348-t:image/webp.jpg",
-          discount: 75,
-          title: "Le Labo Another 29 - 100ml",
-          oldPrice: 6500000,
-          newPrice: 1390000,
-          origin: "Pháp",
-          quantity: 1
-        },
-      ]
+      dataProducts: []
     };
   },
   methods: {
@@ -147,11 +97,23 @@ export default {
     },
     formatPrice(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
+    },
+    async loadProducts() {
+      try {
+        const result = await getProducts({ brandId : 8});
+        console.log(result)
+        this.dataProducts = result.result;
+      } catch (err) {
+        console.log("Lỗi khi lấy danh sách sản phẩm", err);
+      }
+    },
   },
   beforeUnmount() {
     document.body.style.overflow = '';
   },
+  mounted() {
+    this.loadProducts();
+  }
 };
 </script>
 

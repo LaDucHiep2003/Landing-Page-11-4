@@ -19,7 +19,7 @@
           <div class="text-base text-center font-bold"> Mã {{ formatId(item.id) }} -
             <span class="font-normal">{{ item.title }}</span> </div>
           <div class="flex justify-between">
-            <div class="text-base line-through">{{ formatPrice(item.oldPrice) }}đ</div>
+            <div class="text-base line-through">{{ formatPrice(item.price) }}đ</div>
             <div  class="text-base text-[#ef1000] font-bold">{{ formatPrice(item.newPrice) }}đ</div>
           </div>
           <div class="text-base font-bold">Xuất sứ: <span class="font-normal">{{ item.origin }}</span></div>
@@ -71,6 +71,7 @@
 
 <script>
 import Order from "@/pages/Home/Order.vue";
+import {getProducts} from "@/Service/productsService.js";
 
 export default {
   components: {
@@ -79,48 +80,7 @@ export default {
   data() {
     return {
       isOrderPopupOpen: false,
-      dataProducts: [
-        {
-          id: 118,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/4a/07/7f/3d/a99d3184b77c0c90a8225762e16b42e0b99e6c2908e18e5e27d9f0f9-w:800-h:800-l:37853-t:image/jpeg.jpg",
-          discount: 68,
-          title: "Roja Parfums Oceania Limited - 100ml",
-          oldPrice: 6800000,
-          newPrice: 1290000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 114,
-          thumbnail: "https://content.pancake.vn/1/s548x548/fwebp/8d/60/5f/e8/9950b7371df8f74481903d8ec87ada1c74c0fbd00efe450ccd14503f-w:564-h:564-l:19614-t:image/jpeg.jpg",
-          discount: 68,
-          title: "Roja Parfums Elysium Pour Homme - 100ml",
-          oldPrice: 6800000,
-          newPrice: 1290000,
-          origin: "Pháp",
-          quantity: 5
-        },
-        {
-          id: 115,
-          thumbnail: "https://content.pancake.vn/1/fwebp/38/5a/94/00/5a671e3f3c26d3fd46813b9acde9c64823aa41847428d9d1f73fa74b-w:564-h:704-l:141503-t:image/png.png",
-          discount: 75,
-          title: "Roja Parfums LAKMÉ- 100ml",
-          oldPrice: 8500000,
-          newPrice: 1290000,
-          origin: "Pháp",
-          quantity: 4
-        },
-        {
-          id: 116,
-          thumbnail: "https://content.pancake.vn/1/s510x638/fwebp/c3/c2/02/1d/8fb8283ebd62e786cdf9811f6d77f59c34ed352902e99601bcb968e7-w:564-h:705-l:39888-t:image/jpeg.jpg",
-          discount: 75,
-          title: "Roja Burlington 1819 - 100ml",
-          oldPrice: 8600000,
-          newPrice: 1290000,
-          origin: "Pháp",
-          quantity: 3
-        },
-      ]
+      dataProducts: []
     };
   },
   methods: {
@@ -137,11 +97,22 @@ export default {
     },
     formatPrice(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
+    },
+    async loadProducts() {
+      try {
+        const result = await getProducts({ brandId : 15});
+        this.dataProducts = result.result;
+      } catch (err) {
+        console.log("Lỗi khi lấy danh sách sản phẩm", err);
+      }
+    },
   },
   beforeUnmount() {
     document.body.style.overflow = '';
   },
+  mounted() {
+    this.loadProducts();
+  }
 };
 </script>
 
