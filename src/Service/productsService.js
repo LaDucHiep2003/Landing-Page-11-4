@@ -1,4 +1,4 @@
-import {get, patch, post, del} from "../utils/request";
+import {get, patch, post, del} from "@/utils/request";
 
 export const getProducts = async (params) => {
     const filteredParams = Object.fromEntries(
