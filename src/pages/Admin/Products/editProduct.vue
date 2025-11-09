@@ -109,7 +109,7 @@
 <script setup>
 import {onBeforeUnmount, onMounted, reactive, ref} from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { editProduct, getDetailProduct } from '@/service/productsService.js'
+import { editProduct, getDetailProduct } from '@/Service/productsService.js'
 import { ElNotification, ElMessageBox } from 'element-plus'
 import { getBrands } from "@/Service/brandService.js"
 import { Picture, Delete } from '@element-plus/icons-vue'
