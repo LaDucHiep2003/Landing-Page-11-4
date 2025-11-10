@@ -1,6 +1,9 @@
 <template>
 <div class="container">
   <div class="page-view">
+    <RouterLink :to="`/admin/auth/login`">
+                <button class="px-5 font-semibold py-1 bg-color-13 text-color-white rounded-lg max-md:text-xs max-md:px-2 whitespace-nowrap">Login</button>
+              </RouterLink>
     <div class="bg-[#FF0000] px-1 py-1">
       <div class="text-[17px] text-white font-bold text-center">NƯỚC HOA LAVERA - SHOP NƯỚC HOA XÁCH TAY UY TÍN HÀNG ĐẦU VIỆT NAM</div>
     </div>
