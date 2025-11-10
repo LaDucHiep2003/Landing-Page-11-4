@@ -84,7 +84,7 @@ const router = createRouter({
 const checkTokenValidity = async (token) => {
     try {
         const response = await axios.post(
-            'http://localhost:8081/api/auth/introspect',
+            'http://103.163.118.212:30836/api/auth/introspect',
             { token },
             {
                 headers: {

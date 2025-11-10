@@ -1,7 +1,20 @@
-const API_DOMAIN = "http://localhost:8081/api/"
+import Cookies from "js-cookie";
+
+const API_DOMAIN = "http://103.163.118.212:30836/api/"
+
+const getToken = () => {
+    return Cookies.get('token');
+};
 
 export const get = async (patch) => {
-    const response = await fetch(API_DOMAIN + patch);
+    const response = await fetch(API_DOMAIN + patch, {
+        method: "GET",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            ...(getToken() && { Authorization: `Bearer ${getToken()}` }),
+        },
+    });
     const result = response.json()
     return result
 }
@@ -11,7 +24,8 @@ export const post = async (patch, option) => {
         method: "POST",
         headers: {
             Accept: "application/json",
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            ...(getToken() && { Authorization: `Bearer ${getToken()}` }),
         },
         body: JSON.stringify(option)
     });
@@ -21,14 +35,9 @@ export const post = async (patch, option) => {
 export const del = async (patch) => {
     const response = await fetch(API_DOMAIN + patch, {
         method: "DELETE",
-    });
-    const result = response.json()
-    return result
-}
-
-export const update = async (patch) => {
-    const response = await fetch(API_DOMAIN + patch, {
-        method: "UPDATE",
+        headers:{
+            ...(getToken() && { Authorization: `Bearer ${getToken()}` }),
+        }
     });
     const result = response.json()
     return result
@@ -40,6 +49,7 @@ export const patch = async (patch, option) => {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
+            ...(getToken() && { Authorization: `Bearer ${getToken()}` }),
         },
         body: JSON.stringify(option)
     });

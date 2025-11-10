@@ -114,6 +114,8 @@ import { ElNotification, ElMessageBox } from 'element-plus'
 import { getBrands } from "@/Service/brandService.js"
 import { Picture, Delete } from '@element-plus/icons-vue'
 import axios from 'axios'
+import Cookies from "js-cookie";
+
 
 const router = useRouter()
 const route = useRoute()
@@ -124,6 +126,7 @@ const previewImage = ref(null)
 const imageFile = ref(null)
 const uploadingImage = ref(false)
 const loading = ref(false)
+const token = Cookies.get('token');
 
 const sizeForm = reactive({
   id: '',
@@ -277,11 +280,12 @@ async function onSubmit() {
 
       // Gọi API update với FormData (multipart/form-data)
       const result = await axios.patch(
-          `http://localhost:8081/api/products`,
+          `http://103.163.118.212:30836/api/products`,
           formData,
           {
             headers: {
-              'Content-Type': 'multipart/form-data'
+              'Content-Type': 'multipart/form-data',
+              Authorization: `Bearer ${token}`
             }
           }
       )
