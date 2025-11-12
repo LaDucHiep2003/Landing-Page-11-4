@@ -1,10 +1,6 @@
 <template>
 <div class="container">
   <div class="page-view">
-    <div class="bg-[#FF0000] px-1 py-1">
-      <div class="text-[17px] text-white font-bold text-center">NƯỚC HOA LAVERA - SHOP NƯỚC HOA XÁCH TAY UY TÍN HÀNG ĐẦU VIỆT NAM</div>
-    </div>
-
     <Slider />
 
     <Categories />
@@ -50,6 +46,8 @@
     <JeanPaulGaultier />
 
     <LouisVuitton />
+
+    <Chiet />
 
     <Other />
 
@@ -129,6 +127,7 @@ import JeanPaulGaultier from "@/pages/Home/JeanPaulGaultier.vue";
 import LouisVuitton from "@/pages/Home/LouisVuitton.vue";
 import Other from "@/pages/Home/Other.vue";
 import Ordered from "@/pages/Home/Ordered.vue";
+import Chiet from "@/pages/Home/Chiet.vue";
 
 export default {
   components:{
@@ -158,7 +157,8 @@ export default {
     JeanPaulGaultier,
     LouisVuitton,
     Other,
-    Ordered
+    Ordered,
+    Chiet
   },
   data() {
     return {

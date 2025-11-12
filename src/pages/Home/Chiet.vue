@@ -1,6 +1,6 @@
 <template>
-  <section id="delila" class="scroll-smooth py-10">
-    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">PARFUMS DE MARLY</div>
+  <section id="christian-dior" class="scroll-smooth py-10">
+    <div class="text-4xl font-bold text-center uppercase my-6 animate-push-forward">Các Mẫu Chiết Hot Nhất Mùa THU 2025</div>
 
     <div class="flex flex-col gap-6 px-2">
       <div v-for="(item, index) in dataProducts" :key="index" class="flex gap-2 items-center">
@@ -100,7 +100,7 @@ export default {
     },
     async loadProducts() {
       try {
-        const result = await getProducts({ brandId : 10});
+        const result = await getProducts({ brandId : 7});
         this.dataProducts = result.result.data;
       } catch (err) {
         console.log("Lỗi khi lấy danh sách sản phẩm", err);

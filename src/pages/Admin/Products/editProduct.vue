@@ -280,7 +280,7 @@ async function onSubmit() {
 
       // Gọi API update với FormData (multipart/form-data)
       const result = await axios.patch(
-          `http://103.163.118.212:30836/api/products`,
+          `http://localhost:8081/api/products`,
           formData,
           {
             headers: {

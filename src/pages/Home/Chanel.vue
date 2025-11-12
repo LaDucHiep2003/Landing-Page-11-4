@@ -43,11 +43,11 @@
       >
         <!-- Popup Content -->
         <div
-            class="rounded-2xl max-w-[420px] w-full h-auto overflow-y-auto scrollbar-hide shadow-2xl relative"
+            class="rounded-2xl z-50 max-h-[80vh] max-w-[420px] bg-white w-full h-auto overflow-y-auto scrollbar-hide shadow-2xl relative"
             @click.stop
         >
           <!-- Header với nút đóng -->
-          <div class="absolute right-0 top-0 flex items-center justify-between rounded-t-2xl z-10">
+          <div class="absolute right-0 top-0 flex items-center justify-between rounded-t-2xl z-50">
             <button
                 @click="closeOrderPopup"
                 class=""
@@ -70,12 +70,12 @@
 </template>
 
 <script>
-import Order from "@/pages/Home/Order.vue";
+import Order from "@/pages/Home/OrderPopup.vue";
 import {getProducts} from "@/Service/productsService.js";
 
 export default {
   components: {
-    Order
+    Order,
   },
   data() {
     return {
@@ -102,8 +102,7 @@ export default {
     async loadProducts() {
       try {
         const result = await getProducts({ brandId : 1});
-        console.log(result)
-        this.dataProducts = result.result;
+        this.dataProducts = result.result.data;
       } catch (err) {
         console.log("Lỗi khi lấy danh sách sản phẩm", err);
       }

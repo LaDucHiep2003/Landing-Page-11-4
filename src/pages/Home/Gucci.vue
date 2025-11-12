@@ -102,7 +102,7 @@ export default {
     async loadProducts() {
       try {
         const result = await getProducts({ brandId : 2});
-        this.dataProducts = result.result;
+        this.dataProducts = result.result.data;
       } catch (err) {
         console.log("Lỗi khi lấy danh sách sản phẩm", err);
       }

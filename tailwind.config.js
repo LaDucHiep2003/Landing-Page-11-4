@@ -21,6 +21,8 @@ export default {
         "color-11":"#ebebeb",
         "color-12":"rgba(21, 21, 21, 0.5)",
         "color-13":"rgb(75 213 156)",
+        "color-14" : "#7d7d7d",
+        "color-15" : "#0396ff",
         "color-primary" : 'var(--color-primary)',
         "color-info-dark" : 'var(--color-info-dark)',
         "color-danger" : 'var(--color-danger)',

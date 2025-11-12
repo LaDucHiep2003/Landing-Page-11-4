@@ -63,7 +63,7 @@
           </thead>
           <tbody>
           <tr v-for="(item,index) in products">
-            <td class="h-10 border-b border-color-light text-color-dark max-md:text-xs whitespace-nowrap" >{{ index + 1 }}</td>
+            <td class="h-10 border-b border-color-light text-color-dark max-md:text-xs whitespace-nowrap" >{{ (currentPage - 1) * limit + index + 1 }}</td>
             <td class="border-b border-color-light text-color-dark flex justify-center items-center">
               <img :src="item.thumbnail" alt="Image" class="w-20 h-20 max-md:h-12 max-md:w-12">
             </td>
@@ -82,6 +82,22 @@
           </tbody>
         </table>
       </div>
+      <div class="flex justify-center items-center gap-1 my-5">
+        <button
+            v-for="page in totalPage"
+            :key="page"
+            @click="handlePageChange(page)"
+            :class="[
+      'h-9 w-9 rounded-md flex justify-center items-center text-base transition-all duration-150',
+      page === currentPage
+        ? 'bg-[#0396ff] text-white font-semibold'
+        : 'border border-color-3 text-color-9 hover:text-white hover:bg-[#0396ff]'
+    ]"
+        >
+          {{ page }}
+        </button>
+      </div>
+
     </div>
   </div>
 
@@ -97,9 +113,11 @@ export default {
       products : [],
       searchQuery: "",
       allProducts: [],
-      totalPage: 0,
       sortKey: "",
-      sortAscending: true
+      sortAscending: true,
+      totalPage: 0,
+      currentPage: 1,
+      limit: 10,
     }
   },
   methods:{
@@ -114,12 +132,15 @@ export default {
         await this.loadProducts();
       }
     },
-    async loadProducts() {
+    async loadProducts(page = 1, limit = 10) {
       try {
-        const result = await getProducts({});
-        console.log(result)
-        this.products = result.result;
-        this.allProducts = result.result;
+        const result = await getProducts({
+          page: page,
+          limit : limit
+        });
+        this.products = result.result.data;
+        this.allProducts = result.result.data;
+        this.totalPage = result.result.totalPage;
       } catch (err) {
         console.log("Lỗi khi lấy danh sách sản phẩm", err);
       }
@@ -134,7 +155,9 @@ export default {
       }
     },
     handlePageChange(page) {
-      this.loadProducts(page);
+      if (page < 1 || page > this.totalPage) return;
+      this.currentPage = page;
+      this.loadProducts(this.currentPage, this.limit);
     },
     sortBy(key) {
       if (this.sortKey === key) {
@@ -156,7 +179,7 @@ export default {
     },
   },
   async created(){
-    await this.loadProducts();
+    await this.loadProducts(this.currentPage, this.limit);
   }
 }
 </script>

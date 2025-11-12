@@ -1,6 +1,6 @@
 import Cookies from "js-cookie";
 
-const API_DOMAIN = "http://103.163.118.212:30836/api/"
+const API_DOMAIN = "http://localhost:8081/api/"
 
 const getToken = () => {
     return Cookies.get('token');
@@ -11,8 +11,7 @@ export const get = async (patch) => {
         method: "GET",
         headers: {
             "Accept": "application/json",
-            "Content-Type": "application/json",
-            ...(getToken() && { Authorization: `Bearer ${getToken()}` }),
+            "Content-Type": "application/json"
         },
     });
     const result = response.json()
